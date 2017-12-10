@@ -9,7 +9,9 @@ You can achieve the same, by manually setting up the environment (following the 
 
 ## Automatic Installation
 
-TODO: write a script
+```shell
+curl https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh | bash
+```
 
 ## Manual Installation
 
