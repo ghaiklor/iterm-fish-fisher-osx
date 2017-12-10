@@ -13,6 +13,8 @@ trap on_sigterm SIGINT SIGTERM
 
 TEMP_DIR=$(mktemp -d)
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
+COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
+NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
 RESET_COLOR="\033[0m"
 RED_COLOR="\033[0;31m"
 GREEN_COLOR="\033[0;32m"
@@ -34,6 +36,12 @@ function blue_color() {
     echo -e "${BLUE_COLOR}\c"
 }
 
+function separator() {
+    green_color
+    echo "#=======================STEP FINISHED=======================#"
+    reset_color
+}
+
 function hello() {
     green_color
     echo "                                              "
@@ -48,12 +56,13 @@ function hello() {
     echo "                                              "
 
     blue_color
-    echo "This script will guide you through installer of Fish + Oh My Fish and useful plugins"
-    echo "It can ask you for the sudo password few times, but do not afraid"
-    echo "I need sudo just for setting up fish as default shell and adding it into /etc/shells"
+    echo "This script will guide you through installing all the required dependencies for Fish Shell + Oh My Fish"
+    echo "It will not install anything, without your direct agreement (do not afraid)"
+    echo "Here is the first question :)"
 
     green_color
     read -p "Do you want to proceed with installation? (y/N) " -n 1 answer
+    echo
     if [ ${answer} != "y" ]; then
         exit 1
     fi
@@ -68,9 +77,11 @@ function install_command_line_tools() {
     if ! [ -d $(xcode-select -p) ]; then
         blue_color
         echo "You don't have Command Line Tools installed"
+        echo "They are required to proceed with installation"
 
         green_color
-        read -p "Do you agree to proceed with its installation? (y/N) " -n 1 answer
+        read -p "Do you agree to install Command Line Tools? (y/N) " -n 1 answer
+        echo
         if [ ${answer} != "y" ]; then
             exit 1
         fi
@@ -89,6 +100,7 @@ function install_command_line_tools() {
     fi
 
     reset_color
+    separator
 }
 
 function install_homebrew() {
@@ -102,6 +114,7 @@ function install_homebrew() {
 
         green_color
         read -p "Do you agree to proceed with Homebrew installation? (y/N) " -n 1 answer
+        echo
         if [ ${answer} != "y" ]; then
             exit 1
         fi
@@ -122,6 +135,87 @@ function install_homebrew() {
     fi
 
     reset_color
+    separator
+}
+
+function install_iTerm2() {
+    green_color
+    read -p "Do you want to install iTerm 2? (y/N) " -n 1 answer
+    echo
+    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
+        blue_color
+        echo "Installing iTerm2..."
+
+        brew cask install iterm2
+
+        green_color
+        echo "iTerm2 installed!"
+        sleep 1
+    else
+        blue_color
+        echo "Skipping iTerm installation..."
+    fi
+
+    reset_color
+    separator
+}
+
+function install_color_scheme() {
+    green_color
+    read -p "Do you want to install color scheme for iTerm? (y/N) " -n 1 answer
+    echo
+    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
+        blue_color
+        echo "Downloading color scheme in ${TEMP_DIR}..."
+
+        cd ${TEMP_DIR}
+        curl ${COLOR_SCHEME_URL} > ./color_scheme.itermcolors
+
+        blue_color
+        echo "iTerm will be opened in 5 seconds, asking to import color scheme (in case, you installed iTerm)"
+        echo "Close iTerm when color scheme will be imported"
+        sleep 5
+        open -W ./color_scheme.itermcolors
+
+        green_color
+        echo "Color Scheme is installed!"
+        sleep 1
+    else
+        blue_color
+        echo "Skipping Color Scheme installation..."
+    fi
+
+    reset_color
+    separator
+}
+
+function install_nerd_font() {
+    green_color
+    read -p "Do you want to install patched Nerd Fonts? (y/N) " -n 1 answer
+    echo
+    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
+        blue_color
+        echo "Downloading Nerd Font into ${TEMP_DIR}..."
+
+        cd ${TEMP_DIR}
+        curl ${NERD_FONT_URL} > ./nerd_font.otf
+
+        blue_color
+        echo "Font Manager will be opened in 5 seconds, prompting to install Nerd Font"
+        echo "When you will be done with installing Nerd Font, close the Font Manager"
+        sleep 5
+        open -W ./nerd_font.otf
+
+        green_color
+        echo "Nerd Font is successfully installed!"
+        sleep 1
+    else
+        blue_color
+        echo "Skipping Nerd Font installation..."
+    fi
+
+    reset_color
+    separator
 }
 
 function install_fish() {
@@ -131,9 +225,11 @@ function install_fish() {
     if ! [ -x $(command -v fish) ]; then
         blue_color
         echo "Seems like you don't have Fish Shell installed"
+        echo "Fish Shell is required to continue the installation"
 
         green_color
-        read -p "Do you agree to install it? (y/N) " -n 1 answer
+        read -p "Do you agree to install Fish Shell? (y/N) " -n 1 answer
+        echo
         if [ ${answer} != "y" ]; then
             exit 1
         fi
@@ -157,14 +253,20 @@ function install_fish() {
 
     green_color
     echo "Fish installed!"
+    separator
     sleep 1
 
     reset_color
 }
 
 function install_omf() {
+    blue_color
+    echo "Starting to install Oh My Fish Shell..."
+    echo "Oh My Fish is required for the installation"
+
     green_color
     read -p "Do you agree to install Oh My Fish? (y/N) " -n 1 answer
+    echo
     if [ ${answer} != "y" ]; then
         exit 1
     fi
@@ -176,6 +278,7 @@ function install_omf() {
 
     green_color
     echo "Oh My Fish installed!"
+    separator
     sleep 1
 
     reset_color
@@ -186,7 +289,8 @@ function install_omf_plugins_and_themes() {
     echo "Some of the Oh My Fish plugins requires external dependencies to be installed via Homebrew..."
 
     green_color
-    read -p "Do you agree to install them? (y/N) " -n 1 answer
+    read -p "Do you want to install Themes and Plugins for Oh My Fish? (y/N) " -n 1 answer
+    echo
     if [ ${answer} != "y" ]; then
         exit 1
     fi
@@ -202,7 +306,23 @@ function install_omf_plugins_and_themes() {
 
     green_color
     echo "Themes and Plugins installed!"
+    separator
     sleep 1
+}
+
+function post_install() {
+    green_color
+    echo
+    echo
+    echo "Setup was successfully done"
+    echo "Do not forgot to make two simple, but manual things:"
+    echo
+    echo "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply color preset"
+    echo "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply font"
+    echo
+    echo "Happy Coding!"
+
+    exit 0
 }
 
 function on_sigterm() {
@@ -219,6 +339,10 @@ function on_sigterm() {
 hello
 install_command_line_tools
 install_homebrew
+install_iTerm2
+install_color_scheme
+install_nerd_font
 install_fish
 install_omf
 install_omf_plugins_and_themes
+post_install
