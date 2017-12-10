@@ -26,7 +26,7 @@ You can achieve the same setup as mine, by manually setting up the environment (
 - Since script is executing under Bash session, `omf` is not available, so I can't install plugins for it __[IN PROGRESS]__
 
 ```shell
-$ curl https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh | bash
+$ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh)
 ```
 
 ## Manual Installation
