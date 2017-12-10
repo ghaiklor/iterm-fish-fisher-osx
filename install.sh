@@ -275,7 +275,9 @@ function install_omf() {
     echo "Installing Oh My Fish..."
 
     cd ${TEMP_DIR}
-    curl -fsSL ${OH_MY_FISH_URL} | fish
+    curl -fsSL ${OH_MY_FISH_URL} > ./omf_installer
+    chmod +x ./omf_installer
+    ./omf_installer --noninteractive --yes
 
     green_color
     echo "Oh My Fish installed!"
