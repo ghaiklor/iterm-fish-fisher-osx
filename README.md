@@ -85,7 +85,7 @@ $ chsh -s /usr/local/bin/fish
 $ curl -L https://get.oh-my.fish | fish
 ```
 
-__If something goes wrong call `omf doctor`__.
+_If something goes wrong call `omf doctor`_.
 
 #### Install Themes and Plugins
 
