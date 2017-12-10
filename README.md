@@ -1,3 +1,12 @@
+# iTerm 2 + Fish Shell + Oh My Fish + Themes\Plugins
+
+This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
+
+Everytime, I re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
+I bored of it, so I decied to make a list of all actions I doing, when setting it up, alongside with automatic script to do so.
+
+You can achieve the same, by manually setting up the environment (following the guide below) or automatically by executing the installer `install.sh`.
+
 ## Automatic Installation
 
 TODO: write a script
