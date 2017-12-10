@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 set -ex
+trap "echo Something went wrong...\nI'm not a specialist in shell scripts, so better to proceed with manual installation then\nhttps://github.com/ghaiklor/iterm-fish-omf-osx" SIGINT SIGTERM
 
 # Fish
 brew install fish
