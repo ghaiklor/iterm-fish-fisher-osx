@@ -17,7 +17,7 @@ You can achieve the same setup as mine, by manually setting up the environment (
 - Nerd fonts (Powerline patched font)
 - Fish shell with installed Oh My Fish framework
 - Theme `bobthefish` which is based on `agnoster`
-- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git flow, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-plugins))
+- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git flow, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-themes\plugins))
 
 ## Automatic Installation
 
@@ -29,7 +29,7 @@ So, before calling this shell script, you need to install [iTerm 2](#iterm2) wit
 Afterwards, you can call this script in your iTerm instance.
 
 ```shell
-curl https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh | bash
+$ curl https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh | bash
 ```
 
 ## Manual Installation
@@ -45,7 +45,7 @@ curl https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/instal
 Get the iTerm color settings:
 
 - [Material Design Theme](https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors)
-- [More themes @ iterm2colorschemes](http://iterm2colorschemes.com/)
+- [More themes @ iterm2colorschemes](http://iterm2colorschemes.com)
 
 Just save it somewhere and open the file(s).
 The color settings will be imported into iTerm2.
