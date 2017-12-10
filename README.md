@@ -3,7 +3,7 @@
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
 Everytime, I re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
-I bored of it, so I decied to make a list of all actions I doing, when setting it up, alongside with automatic script to do so.
+I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so.
 
 You can achieve the same, by manually setting up the environment (following the guide below) or automatically by executing the installer `install.sh`.
 
@@ -136,7 +136,7 @@ It even provides a convenient ability to open an editor in that directory from a
 This plug-in creates the necessary function to be used with [The Fuck](https://github.com/nvbn/thefuck).
 
 ```shell
-brew install jq grc thefuck &&
-omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck &&
-set -gx PROJECT_PATHS ~/Library/Projects
+brew install jq grc thefuck;
+omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck;
+set -gx PROJECT_PATHS ~/Library/Projects;
 ```
