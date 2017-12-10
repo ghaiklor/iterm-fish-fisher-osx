@@ -9,6 +9,8 @@ You can achieve the same, by manually setting up the environment (following the 
 
 ## Automatic Installation
 
+_TODO: find a way to install iTerm2 with patched fonts through CLI_
+
 Though, it can not be called "fully automatic", since iTerm installation is still must be proceed manually.
 
 So, before calling this shell script, you need to install [iTerm 2](#iterm2) with its color scheme and patched font.
