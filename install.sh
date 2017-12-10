@@ -77,8 +77,8 @@ install_omf_plugins() {
 hello
 
 test -x brew || install_homebrew
+test -x fish || install_fish
 
-install_fish
 install_omf
 
 # Themes
