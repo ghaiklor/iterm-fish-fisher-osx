@@ -21,12 +21,9 @@ You can achieve the same setup as mine, by manually setting up the environment (
 
 ## Automatic Installation
 
-_TODO: find a way to install iTerm2 with patched fonts through CLI_
+### Known Issues
 
-Though, it can not be called "fully automatic", since iTerm installation is still must be proceed manually.
-
-So, before calling this shell script, you need to install [iTerm 2](#iterm2) with its color scheme and patched font.
-Afterwards, you can call this script in your iTerm instance.
+- Since script is executing under Bash session, `omf` is not available, so I can't install plugins for it __[IN PROGRESS]__
 
 ```shell
 $ curl https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh | bash

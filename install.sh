@@ -15,6 +15,7 @@ TEMP_DIR=$(mktemp -d)
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
+OH_MY_FISH_URL="https://get.oh-my.fish"
 RESET_COLOR="\033[0m"
 RED_COLOR="\033[0;31m"
 GREEN_COLOR="\033[0;32m"
@@ -38,7 +39,7 @@ function blue_color() {
 
 function separator() {
     green_color
-    echo "#=======================STEP FINISHED=======================#"
+    echo "#=============================STEP FINISHED=============================#"
     reset_color
 }
 
@@ -93,7 +94,6 @@ function install_command_line_tools() {
 
         green_color
         echo "Command Line Tools installed!"
-        sleep 1
     else
         blue_color
         echo "Seems like you have installed Command Line Tools, so skipping..."
@@ -101,6 +101,7 @@ function install_command_line_tools() {
 
     reset_color
     separator
+    sleep 1
 }
 
 function install_homebrew() {
@@ -128,7 +129,6 @@ function install_homebrew() {
 
         green_color
         echo "Homebrew installed!"
-        sleep 1
     else
         blue_color
         echo "You already have Homebrew installed, so skipping..."
@@ -136,6 +136,7 @@ function install_homebrew() {
 
     reset_color
     separator
+    sleep 1
 }
 
 function install_iTerm2() {
@@ -150,7 +151,6 @@ function install_iTerm2() {
 
         green_color
         echo "iTerm2 installed!"
-        sleep 1
     else
         blue_color
         echo "Skipping iTerm installation..."
@@ -158,6 +158,7 @@ function install_iTerm2() {
 
     reset_color
     separator
+    sleep 1
 }
 
 function install_color_scheme() {
@@ -179,7 +180,6 @@ function install_color_scheme() {
 
         green_color
         echo "Color Scheme is installed!"
-        sleep 1
     else
         blue_color
         echo "Skipping Color Scheme installation..."
@@ -187,6 +187,7 @@ function install_color_scheme() {
 
     reset_color
     separator
+    sleep 1
 }
 
 function install_nerd_font() {
@@ -208,7 +209,6 @@ function install_nerd_font() {
 
         green_color
         echo "Nerd Font is successfully installed!"
-        sleep 1
     else
         blue_color
         echo "Skipping Nerd Font installation..."
@@ -216,6 +216,7 @@ function install_nerd_font() {
 
     reset_color
     separator
+    sleep 1
 }
 
 function install_fish() {
@@ -249,19 +250,18 @@ function install_fish() {
     fi
 
     echo "$(command -v fish)" | sudo tee -a /etc/shells
-    chsh -s $(command -v fish)
+    chsh -s "$(command -v fish)"
 
     green_color
     echo "Fish installed!"
+    reset_color
     separator
     sleep 1
-
-    reset_color
 }
 
 function install_omf() {
     blue_color
-    echo "Starting to install Oh My Fish Shell..."
+    echo "Going to install Oh My Fish Shell..."
     echo "Oh My Fish is required for the installation"
 
     green_color
@@ -274,14 +274,14 @@ function install_omf() {
     blue_color
     echo "Installing Oh My Fish..."
 
-    curl -L https://get.oh-my.fish | fish
+    cd ${TEMP_DIR}
+    curl -fsSL ${OH_MY_FISH_URL} | fish
 
     green_color
     echo "Oh My Fish installed!"
+    reset_color
     separator
     sleep 1
-
-    reset_color
 }
 
 function install_omf_plugins_and_themes() {
@@ -306,6 +306,7 @@ function install_omf_plugins_and_themes() {
 
     green_color
     echo "Themes and Plugins installed!"
+    reset_color
     separator
     sleep 1
 }
