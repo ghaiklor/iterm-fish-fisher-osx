@@ -2,10 +2,20 @@
 
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
-Everytime, I re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
-I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so.
+Every time, I've re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
+I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so, and share it with you all.
 
-You can achieve the same, by manually setting up the environment (following the guide below) or automatically by executing the installer `install.sh`.
+## How To Setup
+
+You can achieve the same setup as mine, by manually setting up the environment ([following the guide](#manual-installation) below) or automatically [by executing the installer](#automatic-installation) `install.sh`.
+
+## Key Features
+
+- Material design theme with soft dark colors
+- Nerd fonts (Powerline patched font)
+- Fish shell with installed Oh My Fish framework
+- Theme `bobthefish` which is based on `agnoster`
+- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git flow, brew, node_modules; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-plugins))
 
 ## Automatic Installation
 
