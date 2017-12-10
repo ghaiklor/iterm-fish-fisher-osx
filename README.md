@@ -2,6 +2,8 @@
 
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
+## The Problem
+
 Every time, I've re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
 I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so, and share it with you all.
 
@@ -11,11 +13,11 @@ You can achieve the same setup as mine, by manually setting up the environment (
 
 ## Key Features
 
-- Material design theme with soft dark colors
+- Material design theme with dark-soft colors
 - Nerd fonts (Powerline patched font)
 - Fish shell with installed Oh My Fish framework
 - Theme `bobthefish` which is based on `agnoster`
-- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git flow, brew, node_modules; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-plugins))
+- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git flow, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-plugins))
 
 ## Automatic Installation
 
@@ -50,7 +52,7 @@ The color settings will be imported into iTerm2.
 Apply them in iTerm through iTerm -> Preferences -> Profiles -> Colors -> Load Presets.
 You can create a different profile, other than Default if you wish to do so.
 
-#### Install a Patched Font
+#### Install Patched Font
 
 - [Meslo M-DZ Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf)
 - [Others @ powerline fonts](https://github.com/ryanoasis/nerd-fonts)
@@ -73,26 +75,27 @@ Download and install [Fish Shell](https://fishshell.com).
 Change default shell to fish:
 
 ```shell
-chsh -s /usr/local/bin/fish
+$ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+$ chsh -s /usr/local/bin/fish
 ```
 
 #### Install Oh My Fish
 
 ```shell
-curl -L https://get.oh-my.fish | fish
+$ curl -L https://get.oh-my.fish | fish
 ```
 
 __If something goes wrong call `omf doctor`__.
 
-#### Install Theme
-
-[Bob The Fish](https://github.com/oh-my-fish/theme-bobthefish) is based on `agnoster` theme, which was the choise for me before Bob The Fish:
+#### Install Themes\Plugins
 
 ```shell
-omf install bobthefish
+$ brew install jq grc thefuck
+$ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme
+$ set -gx PROJECT_PATHS ~/Library/Projects
+$ theme --download-all
+$ theme bobthefish
 ```
-
-#### Install Plugins
 
 - [Spark](https://github.com/oh-my-fish/plugin-spark)
 
@@ -127,7 +130,7 @@ Computes string digests using various hashing algorithms.
 - [ErrNo](https://github.com/oh-my-fish/plugin-errno)
 
 Translate error codes to return status codes or lookup them by message strings.
-It has autocomplete, so you can easily navigate through `errno` and `strerror`.
+It has completions, so you can easily navigate through `errno` and `strerror`.
 
 - [Brew](https://github.com/oh-my-fish/plugin-brew)
 
@@ -142,7 +145,7 @@ It allows to call, i.e. `mocha` as it was installed globally, but from your curr
 - [GRC](https://github.com/oh-my-fish/plugin-grc)
 
 A grc plugin plugin for Oh My Fish which colorized output of many default commands like `ls`, `netstat`, etc...
-It uses an externaly dependency `grc`, which must be installed.
+It uses an external dependency `grc`, which must be installed.
 
 - [PJ](https://github.com/oh-my-fish/plugin-pj)
 
@@ -154,8 +157,11 @@ It even provides a convenient ability to open an editor in that directory from a
 
 This plug-in creates the necessary function to be used with [The Fuck](https://github.com/nvbn/thefuck).
 
-```shell
-brew install jq grc thefuck;
-omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck;
-set -gx PROJECT_PATHS ~/Library/Projects;
-```
+- [Theme](https://github.com/oh-my-fish/plugin-theme)
+
+Quick theme switcher for Oh My Fish.
+`theme` is smart to auto-complete as you type all the available oh-my-fish themes.
+
+## License
+
+[MIT](./LICENSE)
