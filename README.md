@@ -87,7 +87,8 @@ _If something goes wrong call `omf doctor`_.
 
 ```shell
 $ brew install jq grc thefuck
-$ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme
+$ omf install bobthefish
+$ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
 $ set -gx PROJECT_PATHS ~/Library/Projects
 $ theme bobthefish
 ```
@@ -151,11 +152,6 @@ It even provides a convenient ability to open an editor in that directory from a
 - [The Fuck](https://github.com/oh-my-fish/plugin-thefuck)
 
 This plug-in creates the necessary function to be used with [The Fuck](https://github.com/nvbn/thefuck).
-
-- [Theme](https://github.com/oh-my-fish/plugin-theme)
-
-Quick theme switcher for Oh My Fish.
-`theme` is smart to auto-complete as you type all the available oh-my-fish themes.
 
 ## License
 

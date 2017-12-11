@@ -8,9 +8,7 @@
 #fish_version   :2.7.0
 #===================================================================================
 
-set -e
-
 brew install jq grc thefuck
-omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme
+omf install bobthefish
+omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
 set -gx PROJECT_PATHS ~/Library/Projects
-theme bobthefish
