@@ -91,7 +91,7 @@ _If something goes wrong call `omf doctor`_.
 ```shell
 $ brew install jq grc thefuck
 $ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
-$ set -Ugx PROJECT_PATHS ~/Library/Projects
+$ set -U PROJECT_PATHS ~/Library/Projects
 $
 $ brew install --with-default-names gnu-sed
 $ brew install coreutils
