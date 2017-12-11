@@ -98,6 +98,7 @@ $ brew install coreutils
 $ set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 $ set -U fish_key_bindings fish_vi_key_bindings
 $ set -U budspencer_nogreeting
+$ set -U budspencer_nobell
 $ fish_update_completions
 $ omf install budspencer
 ```
