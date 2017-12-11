@@ -9,8 +9,8 @@
 #===================================================================================
 
 # Plugins Configuration
-brew install jq thefuck
-omf install spark license battery await errno brew node-binpath pj thefuck
+brew install jq
+omf install spark license battery await errno brew node-binpath pj
 set -U PROJECT_PATHS ~/Library/Projects
 
 # Theme Configuration
