@@ -180,13 +180,13 @@ function install_color_scheme() {
         echo "Downloading color scheme in ${TEMP_DIR}..."
 
         cd ${TEMP_DIR}
-        curl -fsSL ${COLOR_SCHEME_URL} > ./color_scheme.itermcolors
+        curl -fsSL ${COLOR_SCHEME_URL} > ./material-design.itermcolors
 
         blue_color
         echo "iTerm will be opened in 5 seconds, asking to import color scheme (in case, you installed iTerm)"
         echo "Close iTerm when color scheme will be imported"
         sleep 5
-        open -W ./color_scheme.itermcolors
+        open -W ./material-design.itermcolors
 
         green_color
         echo "Color Scheme is installed!"
