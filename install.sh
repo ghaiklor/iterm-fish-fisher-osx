@@ -80,24 +80,13 @@ function install_command_line_tools() {
         blue_color
         echo "You don't have Command Line Tools installed"
         echo "They are required to proceed with installation"
-
-        green_color
-        read -p "Do you agree to install Command Line Tools? (y/N) " -n 1 answer
-        echo
-        if [ ${answer} != "y" ]; then
-            exit 1
-        fi
-
-        blue_color
-        echo "Installing Command Line Tools..."
-
-        xcode-select --install
-
-        green_color
-        echo "Command Line Tools installed!"
+        echo "Though, I can't run installation of it from the script"
+        echo "Type git in the console, and install Developer Tools from pop-up window"
+        
+        exit 1
     else
         blue_color
-        echo "Seems like you have installed Command Line Tools, so skipping..."
+        echo "Seems like you have installed Command Line Tools..."
     fi
 
     reset_color
