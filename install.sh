@@ -252,7 +252,7 @@ function install_fish() {
         echo "1) When adding fish shell into /etc/shells via tee"
         echo "2) When changing your default shell via chsh -s"
 
-        brew install fish
+        brew install fish --HEAD
     else
         blue_color
         echo "You already have Fish Shell installed"
