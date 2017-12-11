@@ -10,15 +10,21 @@
 
 # Plugins Configuration
 brew install jq thefuck
-omf install spark license battery await hash errno brew node-binpath pj thefuck
+omf install spark license battery await errno brew node-binpath pj thefuck
 set -U PROJECT_PATHS ~/Library/Projects
 
 # Theme Configuration
-brew install --with-default-names gnu-sed
-brew install coreutils
-set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
-set -U fish_key_bindings fish_vi_key_bindings
-set -U budspencer_nogreeting
-set -U budspencer_nobell
+omf install bobthefish
+set -U theme_title_display_process yes
+set -U theme_title_display_path yes
+set -U theme_title_display_user yes
+set -U theme_title_use_abbreviated_path yes
+set -U theme_display_ruby no
+set -U theme_display_git yes
+set -U theme_display_git_untracked yes
+set -U theme_display_git_ahead_verbose yes
+set -U theme_display_cmd_duration yes
+set -U theme_show_exit_status yes
+set -U theme_git_worktree_support no
+set -U theme_color_scheme dark
 fish_update_completions
-omf install budspencer
