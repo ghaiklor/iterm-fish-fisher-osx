@@ -4,7 +4,7 @@
 #author         :ghaiklor
 #date           :2017-12-10
 #version        :0.1
-#usage          :bash install.sh
+#usage          :bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh)
 #bash_version   :3.2.57(1)-release
 #===================================================================================
 
@@ -16,6 +16,7 @@ HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/maste
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
 OH_MY_FISH_URL="https://get.oh-my.fish"
+PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install_plugins.sh"
 RESET_COLOR="\033[0m"
 RED_COLOR="\033[0;31m"
 GREEN_COLOR="\033[0;32m"
@@ -293,21 +294,22 @@ function install_omf_plugins_and_themes() {
     green_color
     read -p "Do you want to install Themes and Plugins for Oh My Fish? (y/N) " -n 1 answer
     echo
-    if [ ${answer} != "y" ]; then
-        exit 1
+    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
+        blue_color
+        echo "Installing Themes and Plugins..."
+
+        cd ${TEMP_DIR}
+        curl -fsSL ${PLUGINS_INSTALLER_URL} > ./plugins_installer
+        chmod +x ./plugins_installer
+        ./plugins_installer
+
+        green_color
+        echo "Themes and Plugins installed!"
+    else
+        blue_color
+        echo "Skipping Themes and Plugins installation..."
     fi
 
-    blue_color
-    echo "Installing Themes and Plugins..."
-
-    brew install jq grc thefuck
-    omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme
-    set -gx PROJECT_PATHS ~/Library/Projects
-    theme --download-all
-    theme bobthefish
-
-    green_color
-    echo "Themes and Plugins installed!"
     reset_color
     separator
     sleep 1
