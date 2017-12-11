@@ -21,7 +21,7 @@ You can achieve the same setup as mine, by manually setting up the environment (
 
 ## Automatic Installation
 
-Highly recommended to run the script below under Bash session in default Terminal.app.
+__Highly recommended__ to run the script below under Bash session in default Terminal.app.
 I can not guarantee proper installation outside of Terminal.app + Bash Shell.
 
 ```shell
