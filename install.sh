@@ -233,7 +233,7 @@ function install_fish() {
     blue_color
     echo "Trying to detect installed Fish Shell..."
 
-    if ! [ -x $(command -v fish) ]; then
+    if ! [ $(which fish) ]; then
         blue_color
         echo "Seems like you don't have Fish Shell installed"
         echo "Fish Shell is required to continue the installation"
