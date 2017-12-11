@@ -147,20 +147,19 @@ function install_iTerm2() {
         echo "I can't find installed iTerm"
 
         green_color
-        read -p "Do you want to install it? (y/N) " -n 1 answer
+        read -p "Do you agree to install it? (y/N) " -n 1 answer
         echo
-        if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
-            blue_color
-            echo "Installing iTerm2..."
-
-            brew cask install iterm2
-
-            green_color
-            echo "iTerm2 installed!"
-        else
-            blue_color
-            echo "Skipping iTerm installation..."
+        if [ ${answer} != "y" ]; then
+            exit 1
         fi
+
+        blue_color
+        echo "Installing iTerm2..."
+
+        brew cask install iterm2
+
+        green_color
+        echo "iTerm2 installed!"
     else
         blue_color
         echo "Found installed iTerm.app, so skipping..."
