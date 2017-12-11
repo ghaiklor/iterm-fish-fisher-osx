@@ -50,9 +50,9 @@ You can create a different profile, other than Default if you wish to do so.
 
 #### Install Patched Font
 
-- [Meslo M-DZ Mono](https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf)
+- [Meslo M-DZ Mono](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf)
 - [Others @ powerline fonts](https://github.com/ryanoasis/nerd-fonts)
-    
+
 Open the downloaded font and press "Install Font".
 
 Set this font in iTerm2 (iTerm -> Preferences -> Profiles -> Text).
@@ -86,12 +86,20 @@ _If something goes wrong call `omf doctor`_.
 #### Install Themes and Plugins
 
 ```shell
+$ brew install --with-default-names gnu-sed
+$ set -U fish_key_bindings fish_vi_key_bindings
+$ fish_update_completions
+$ omf install budspencer
+$
 $ brew install jq grc thefuck
-$ omf install bobthefish
 $ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
 $ set -gx PROJECT_PATHS ~/Library/Projects
-$ theme bobthefish
 ```
+
+- [Budspencer Theme](https://github.com/oh-my-fish/theme-budspencer)
+
+A theme for nerds, makes fish even more powerful.
+It's equipped with a hell of a lot of nice functions and key bindings to speed up your workflow.
 
 - [Spark](https://github.com/oh-my-fish/plugin-spark)
 
