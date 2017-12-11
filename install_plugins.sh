@@ -11,6 +11,7 @@
 # Theme Configuration
 brew install --with-default-names gnu-sed
 set -U fish_key_bindings fish_vi_key_bindings
+set -U budspencer_nogreeting
 fish_update_completions
 omf install budspencer
 
