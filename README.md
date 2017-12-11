@@ -89,8 +89,8 @@ _If something goes wrong call `omf doctor`_.
 #### Install Themes and Plugins
 
 ```shell
-$ brew install jq thefuck
-$ omf install spark license battery await errno brew node-binpath pj thefuck
+$ brew install jq
+$ omf install spark license battery await errno brew node-binpath pj
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
 $ omf install bobthefish
@@ -154,10 +154,6 @@ It allows to call, i.e. `mocha` as it was installed globally, but from your curr
 PJ allows you to easily jump between your favourite directories in a predictable manner.
 You tell pj where to look for your projects, and it will allow you to jump to them easily with tab completion.
 It even provides a convenient ability to open an editor in that directory from anywhere!
-
-- [The Fuck](https://github.com/oh-my-fish/plugin-thefuck)
-
-This plug-in creates the necessary function to be used with [The Fuck](https://github.com/nvbn/thefuck).
 
 ## License
 
