@@ -54,13 +54,13 @@ function hello() {
     echo "/_/ /_/____/_/ /_/  /____/_/ /_/\___/_/_/     "
     echo "                                              "
     echo "          iTerm + Fish + Oh My Fish           "
+    echo "                by @ghaiklor                  "
     echo "                                              "
     echo "                                              "
 
     blue_color
     echo "This script will guide you through installing all the required dependencies for Fish Shell + Oh My Fish"
     echo "It will not install anything, without your direct agreement (do not afraid)"
-    echo "Here is the first question :)"
 
     green_color
     read -p "Do you want to proceed with installation? (y/N) " -n 1 answer
@@ -171,7 +171,7 @@ function install_color_scheme() {
         echo "Downloading color scheme in ${TEMP_DIR}..."
 
         cd ${TEMP_DIR}
-        curl ${COLOR_SCHEME_URL} > ./color_scheme.itermcolors
+        curl -fsSL ${COLOR_SCHEME_URL} > ./color_scheme.itermcolors
 
         blue_color
         echo "iTerm will be opened in 5 seconds, asking to import color scheme (in case, you installed iTerm)"
@@ -200,7 +200,7 @@ function install_nerd_font() {
         echo "Downloading Nerd Font into ${TEMP_DIR}..."
 
         cd ${TEMP_DIR}
-        curl ${NERD_FONT_URL} > ./nerd_font.otf
+        curl -fsSL ${NERD_FONT_URL} > ./nerd_font.otf
 
         blue_color
         echo "Font Manager will be opened in 5 seconds, prompting to install Nerd Font"
@@ -230,7 +230,7 @@ function install_fish() {
         echo "Fish Shell is required to continue the installation"
 
         green_color
-        read -p "Do you agree to install Fish Shell? (y/N) " -n 1 answer
+        read -p "Do you agree to install it? (y/N) " -n 1 answer
         echo
         if [ ${answer} != "y" ]; then
             exit 1
@@ -247,7 +247,7 @@ function install_fish() {
     else
         blue_color
         echo "You already have Fish Shell installed"
-        echo "Just to be sure, that this is your default shell..."
+        echo "Just to be sure, that this is your default shell, I'm going to call chsh..."
     fi
 
     echo "$(command -v fish)" | sudo tee -a /etc/shells
@@ -255,6 +255,7 @@ function install_fish() {
 
     green_color
     echo "Fish installed!"
+
     reset_color
     separator
     sleep 1
@@ -262,7 +263,6 @@ function install_fish() {
 
 function install_omf() {
     blue_color
-    echo "Going to install Oh My Fish Shell..."
     echo "Oh My Fish is required for the installation"
 
     green_color
@@ -282,6 +282,7 @@ function install_omf() {
 
     green_color
     echo "Oh My Fish installed!"
+
     reset_color
     separator
     sleep 1
