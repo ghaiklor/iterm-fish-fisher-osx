@@ -21,18 +21,8 @@ You can achieve the same setup as mine, by manually setting up the environment (
 
 ## Automatic Installation
 
-Highly recommended to close iTerm2 and run the script below under Bash session in default Terminal.app.
-
+Highly recommended to run the script below under Bash session in default Terminal.app.
 I can not guarantee proper installation outside of Terminal.app + Bash Shell.
-
-The reasons for that:
-
-- Some of the steps importing color scheme into iTerm 2 via opening/closing it;
-- Some of them reset default shell to Fish Shell and I can't guarantee what happens if execute these steps under iTerm2/Fish (if you have them installed)
-
-### Known Issues
-
-- Since script is executing under Bash session, `omf` is not available, so I can't install plugins for it __[IN PROGRESS]__
 
 ```shell
 $ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh)
@@ -99,7 +89,6 @@ _If something goes wrong call `omf doctor`_.
 $ brew install jq grc thefuck
 $ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme
 $ set -gx PROJECT_PATHS ~/Library/Projects
-$ theme --download-all
 $ theme bobthefish
 ```
 
