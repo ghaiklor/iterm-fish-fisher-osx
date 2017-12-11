@@ -10,10 +10,7 @@
 
 set -e
 
-BREW_DEPENDENCIES=(jq grc thefuck)
-OH_MY_FISH_PLUGINS=(spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme)
-
-brew install ${BREW_DEPENDENCIES[*]}
-omf install ${OH_MY_FISH_PLUGINS[*]}
+brew install jq grc thefuck
+omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck theme
 set -gx PROJECT_PATHS ~/Library/Projects
 theme bobthefish
