@@ -91,16 +91,15 @@ _If something goes wrong call `omf doctor`_.
 ```shell
 $ brew install jq grc thefuck
 $ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
-$ set -gx PROJECT_PATHS ~/Library/Projects
+$ set -Ugx PROJECT_PATHS ~/Library/Projects
 $
 $ brew install --with-default-names gnu-sed
 $ brew install coreutils
-$ set PATH /usr/local/opt/coreutils/libexec/gnubin $PATH
+$ set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
 $ set -U fish_key_bindings fish_vi_key_bindings
 $ set -U budspencer_nogreeting
 $ fish_update_completions
 $ omf install budspencer
-$
 ```
 
 - [Budspencer Theme](https://github.com/oh-my-fish/theme-budspencer)
