@@ -9,8 +9,8 @@
 #===================================================================================
 
 # Plugins Configuration
-brew install jq grc thefuck
-omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
+brew install jq thefuck
+omf install spark license battery await hash errno brew node-binpath pj thefuck
 set -U PROJECT_PATHS ~/Library/Projects
 
 # Theme Configuration
