@@ -20,7 +20,7 @@ You can achieve the same setup as mine, by manually setting up the environment (
 - Nerd fonts (Powerline patched font)
 - Fish shell with installed Oh My Fish framework
 - Theme `budspencer` with enabled Vi mode
-- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git flow, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-themes-and-plugins))
+- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-themes-and-plugins))
 
 ## Automatic Installation
 
@@ -89,8 +89,8 @@ _If something goes wrong call `omf doctor`_.
 #### Install Themes and Plugins
 
 ```shell
-$ brew install jq grc thefuck
-$ omf install spark license battery git-flow await hash errno brew node-binpath grc pj thefuck
+$ brew install jq thefuck
+$ omf install spark license battery await hash errno brew node-binpath pj thefuck
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
 $ brew install --with-default-names gnu-sed
@@ -123,11 +123,6 @@ As an external dependency it requires `jq` to be installed.
 
 Display battery slots in your terminal by calling `battery`.
 
-- [GitFlow](https://github.com/oh-my-fish/plugin-git-flow)
-
-Completion support for git-flow.
-The contained completion routines provide support for completing git-flow `init` and `version`, feature, hotfix and release branches.
-
 - [Await](https://github.com/oh-my-fish/plugin-await)
 
 Wait last background job with a nice progress spinner.
@@ -152,11 +147,6 @@ Oh My Fish plugin to integrate Homebrew paths into shell.
 Automatically add `node_modules/.bin` to PATH when present.
 Useful, when you don't want to have globally installed npm packages, but has local installments in your project.
 It allows to call, i.e. `mocha` as it was installed globally, but from your current project folder.
-
-- [GRC](https://github.com/oh-my-fish/plugin-grc)
-
-A grc plugin plugin for Oh My Fish which colorized output of many default commands like `ls`, `netstat`, etc...
-It uses an external dependency `grc`, which must be installed.
 
 - [PJ](https://github.com/oh-my-fish/plugin-pj)
 
