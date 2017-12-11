@@ -2,6 +2,9 @@
 
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
+Please, raise your issue if something strange happened.
+I'd like to improve this script, so it could work without any errors during the installation.
+
 ## The Problem
 
 Every time, I've re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
