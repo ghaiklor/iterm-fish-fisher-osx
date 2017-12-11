@@ -90,11 +90,9 @@ function install_command_line_tools() {
 
         blue_color
         echo "Installing Command Line Tools..."
+        echo "Please, wait until Command Line Tools will be installed, before continue"
 
         xcode-select --install
-
-        green_color
-        echo "Command Line Tools installed!"
     else
         blue_color
         echo "Seems like you have installed Command Line Tools, so skipping..."
