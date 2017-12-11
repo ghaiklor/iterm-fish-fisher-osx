@@ -339,6 +339,7 @@ function post_install() {
     echo
     echo "Happy Coding!"
 
+    reset_color
     exit 0
 }
 
