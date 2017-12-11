@@ -19,7 +19,7 @@ You can achieve the same setup as mine, by manually setting up the environment (
 - Material design theme with dark-soft colors
 - Nerd fonts (Powerline patched font)
 - Fish shell with installed Oh My Fish framework
-- Theme `budspencer` with enabled Vi mode
+- Theme `bobthefish` with enabled Vi mode
 - A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-themes-and-plugins))
 
 ## Automatic Installation
@@ -90,20 +90,26 @@ _If something goes wrong call `omf doctor`_.
 
 ```shell
 $ brew install jq thefuck
-$ omf install spark license battery await hash errno brew node-binpath pj thefuck
+$ omf install spark license battery await errno brew node-binpath pj thefuck
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
-$ brew install --with-default-names gnu-sed
-$ brew install coreutils
-$ set -U fish_user_paths /usr/local/opt/coreutils/libexec/gnubin $fish_user_paths
-$ set -U fish_key_bindings fish_vi_key_bindings
-$ set -U budspencer_nogreeting
-$ set -U budspencer_nobell
+$ omf install bobthefish
+$ set -U theme_title_display_process yes
+$ set -U theme_title_display_path yes
+$ set -U theme_title_display_user yes
+$ set -U theme_title_use_abbreviated_path yes
+$ set -U theme_display_ruby no
+$ set -U theme_display_git yes
+$ set -U theme_display_git_untracked yes
+$ set -U theme_display_git_ahead_verbose yes
+$ set -U theme_display_cmd_duration yes
+$ set -U theme_show_exit_status yes
+$ set -U theme_git_worktree_support no
+$ set -U theme_color_scheme dark
 $ fish_update_completions
-$ omf install budspencer
 ```
 
-- [Budspencer Theme](https://github.com/oh-my-fish/theme-budspencer)
+- [BobTheFish Theme](https://github.com/oh-my-fish/theme-bobthefish)
 
 A theme for nerds, makes fish even more powerful.
 It's equipped with a hell of a lot of nice functions and key bindings to speed up your workflow.
@@ -127,11 +133,6 @@ Display battery slots in your terminal by calling `battery`.
 
 Wait last background job with a nice progress spinner.
 `sleep 10 & await`, `git pull origin master & await`, etc...
-
-- [Hash](https://github.com/oh-my-fish/plugin-hash)
-
-Computes string digests using various hashing algorithms.
-`hash md5 "Hello World!"`, `cat myfile.txt | hash md5`...
 
 - [ErrNo](https://github.com/oh-my-fish/plugin-errno)
 
