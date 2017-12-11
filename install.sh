@@ -333,7 +333,7 @@ function post_install() {
     echo "Do not forgot to make two simple, but manual things:"
     echo
     echo "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply color preset"
-    echo "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply font"
+    echo "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply font (for non-ASCII as well)"
     echo
     echo "Happy Coding!"
 
