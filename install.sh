@@ -141,20 +141,31 @@ function install_homebrew() {
 }
 
 function install_iTerm2() {
-    green_color
-    read -p "Do you want to install iTerm 2? (y/N) " -n 1 answer
-    echo
-    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
-        blue_color
-        echo "Installing iTerm2..."
+    blue_color
+    echo "Trying to find installed iTerm..."
 
-        brew cask install iterm2
+    if ! [ $(ls /Applications/ | grep iTerm.app) ]; then
+        blue_color
+        echo "I can't find installed iTerm"
 
         green_color
-        echo "iTerm2 installed!"
+        read -p "Do you want to install it? (y/N) " -n 1 answer
+        echo
+        if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
+            blue_color
+            echo "Installing iTerm2..."
+
+            brew cask install iterm2
+
+            green_color
+            echo "iTerm2 installed!"
+        else
+            blue_color
+            echo "Skipping iTerm installation..."
+        fi
     else
         blue_color
-        echo "Skipping iTerm installation..."
+        echo "Found installed iTerm.app, so skipping..."
     fi
 
     reset_color
@@ -333,6 +344,7 @@ function post_install() {
 
 function on_sigterm() {
     red_color
+    echo
     echo -e "Wow... Something serious happened!"
     echo -e "Though, I don't know what really happened :("
     echo -e "Please, refer to manual installation -> ${BLUE_COLOR}https://github.com/ghaiklor/iterm-fish-omf-osx${RED_COLOR}"
