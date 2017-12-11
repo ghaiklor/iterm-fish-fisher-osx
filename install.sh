@@ -107,7 +107,7 @@ function install_homebrew() {
     blue_color
     echo "Trying to detect installed Homebrew..."
 
-    if ! [ -x $(command -v brew) ]; then
+    if ! [ $(which brew) ]; then
         blue_color
         echo "Seems like you don't have Homebrew installed"
         echo "We need it for completing the installation of your awesome terminal environment"
