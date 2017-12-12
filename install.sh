@@ -12,10 +12,11 @@ set -e
 trap on_sigterm SIGINT SIGTERM
 
 TEMP_DIR=$(mktemp -d)
+GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-omf-osx/"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
-OH_MY_FISH_URL="https://get.oh-my.fish"
+FISHERMAN_URL="https://git.io/fisher"
 PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install_plugins.sh"
 RESET_COLOR="\033[0m"
 RED_COLOR="\033[0;31m"
@@ -53,13 +54,13 @@ function hello() {
     echo " / __/ (__  ) / / /  (__  ) / / /  __/ / /    "
     echo "/_/ /_/____/_/ /_/  /____/_/ /_/\___/_/_/     "
     echo "                                              "
-    echo "          iTerm + Fish + Oh My Fish           "
-    echo "                by @ghaiklor                  "
+    echo "           iTerm + Fish + Fisherman           "
+    echo "                 by @ghaiklor                 "
     echo "                                              "
     echo "                                              "
 
     blue_color
-    echo "This script will guide you through installing all the required dependencies for Fish Shell + Oh My Fish"
+    echo "This script will guide you through installing all the required dependencies for Fish Shell + Fisherman + Themes and Plugins"
     echo "It will not install anything, without your direct agreement (do not afraid)"
 
     green_color
@@ -91,6 +92,7 @@ function install_command_line_tools() {
         blue_color
         echo "Installing Command Line Tools..."
         echo "Please, wait until Command Line Tools will be installed, before continue"
+        echo "I can't wait for its installation from the script, so continue..."
 
         xcode-select --install
     else
@@ -269,39 +271,36 @@ function install_fish() {
     sleep 1
 }
 
-function install_omf() {
+function install_fisherman() {
     blue_color
-    echo "Oh My Fish is required for the installation"
+    echo "Fisherman is required for the installation"
 
     green_color
-    read -p "Do you agree to install Oh My Fish? (y/N) " -n 1 answer
+    read -p "Do you agree to install it? (y/N) " -n 1 answer
     echo
     if [ ${answer} != "y" ]; then
         exit 1
     fi
 
     blue_color
-    echo "Installing Oh My Fish..."
+    echo "Installing Fisherman..."
 
-    cd ${TEMP_DIR}
-    curl -fsSL ${OH_MY_FISH_URL} > ./omf_installer
-    chmod +x ./omf_installer
-    ./omf_installer --noninteractive --yes
+    curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs ${FISHERMAN_URL}
 
     green_color
-    echo "Oh My Fish installed!"
+    echo "Fisherman installed!"
 
     reset_color
     separator
     sleep 1
 }
 
-function install_omf_plugins_and_themes() {
+function install_fisherman_plugins_and_themes() {
     blue_color
-    echo "Some of the Oh My Fish plugins requires external dependencies to be installed via Homebrew..."
+    echo "Some of the Fisherman plugins requires external dependencies to be installed via Homebrew..."
 
     green_color
-    read -p "Do you want to install Themes and Plugins for Oh My Fish? (y/N) " -n 1 answer
+    read -p "Do you want to install Themes and Plugins for Fisherman? (y/N) " -n 1 answer
     echo
     if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
         blue_color
@@ -345,8 +344,8 @@ function on_sigterm() {
     echo
     echo -e "Wow... Something serious happened!"
     echo -e "Though, I don't know what really happened :("
-    echo -e "Please, refer to manual installation -> ${BLUE_COLOR}https://github.com/ghaiklor/iterm-fish-omf-osx${RED_COLOR}"
-    echo -e "In case, you want to help me fix this problem, raise an issue -> ${BLUE_COLOR}https://github.com/ghaiklor/iterm-fish-omf-osx/issues/new"
+    echo -e "Please, refer to manual installation -> ${BLUE_COLOR}${GITHUB_REPO_URL_BASE}${RED_COLOR}"
+    echo -e "In case, you want to help me fix this problem, raise an issue -> ${BLUE_COLOR}${GITHUB_REPO_URL_BASE}issues/new"
 
     reset_color
     exit 1
@@ -359,6 +358,6 @@ install_iTerm2
 install_color_scheme
 install_nerd_font
 install_fish
-install_omf
-install_omf_plugins_and_themes
+install_fisherman
+install_fisherman_plugins_and_themes
 post_install
