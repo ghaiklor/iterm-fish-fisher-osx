@@ -4,7 +4,7 @@
 #author         :ghaiklor
 #date           :2017-12-11
 #version        :0.1
-#usage          :curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install_plugins.sh | fish
+#usage          :curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install_plugins.sh | fish
 #fish_version   :2.7.0
 #===================================================================================
 

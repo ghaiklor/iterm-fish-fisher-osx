@@ -32,7 +32,7 @@ $ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman
 - [Download](http://www.iterm2.com/downloads.html) and install iTerm2 (it has better color fidelity than the built in Terminal).
 
 ```shell
-brew cask install iterm2
+$ brew cask install iterm2
 ```
 
 #### Install Color Scheme
@@ -78,7 +78,7 @@ $ chsh -s /usr/local/bin/fish
 [Fisherman](https://fisherman.github.io) is a plugin manager for Fish Shell.
 
 ```shell
-curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+$ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 ```
 
 #### Install Themes and Plugins
