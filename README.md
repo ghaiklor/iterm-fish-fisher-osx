@@ -110,8 +110,8 @@ $ set -U PROJECT_PATHS ~/Library/Projects
 $
 $ fisher shark
 $
-$ brew install thefuck
 $ fisher omf/thefuck
+$ brew install thefuck
 $
 $ fisher upto
 $ fisher z
