@@ -71,17 +71,18 @@ Restart iTerm2 for all changes to take effect.
 
 Download and install [Fish Shell](https://fishshell.com).
 
-Change default shell to fish:
-
 ```shell
+$ brew install fish
 $ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 $ chsh -s /usr/local/bin/fish
 ```
 
-#### Install Oh My Fish
+#### Install Fisherman
+
+[Fisherman](https://fisherman.github.io) is a plugin manager for Fish Shell.
 
 ```shell
-$ curl -L https://get.oh-my.fish | fish
+curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 ```
 
 _If something goes wrong call `omf doctor`_.
@@ -90,10 +91,10 @@ _If something goes wrong call `omf doctor`_.
 
 ```shell
 $ brew install jq
-$ omf install spark license battery await errno brew node-binpath pj
+$ fisher omf/spark omf/license omf/battery omf/await omf/errno omf/brew omf/node-binpath omf/pj
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
-$ omf install bobthefish
+$ fisher bobthefish
 $ set -U theme_title_display_process yes
 $ set -U theme_title_display_path yes
 $ set -U theme_title_display_user yes
