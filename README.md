@@ -14,14 +14,6 @@ I bored of it, so I decided to make a list of all actions I doing, when setting 
 
 You can achieve the same setup as mine, by manually setting up the environment ([following the guide](#manual-installation) below) or automatically [by executing the installer](#automatic-installation) `install.sh`.
 
-## Key Features
-
-- Material design theme with dark-soft colors
-- Nerd fonts (Powerline patched font)
-- Fish shell with installed Oh My Fish framework
-- Theme `bobthefish` with enabled Vi mode
-- A lot of plugins for simplifying your daily routine: generating LICENSE file; completion for git, brew, node_modules, etc; plugin for jumping between your project folders via one command; etc... (for a full list of plugins refer [here](#install-themes-and-plugins))
-
 ## Automatic Installation
 
 __Highly recommended__ to run the script below under Bash session in default Terminal.app.
