@@ -57,7 +57,7 @@ You can create a different profile, other than Default if you wish to do so.
 
 #### Install Patched Font
 
-- [Anonymice Nerd Font](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/AnonymousPro/complete/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf)
+- [Anonymice Nerd Font Complete Mono](https://github.com/ryanoasis/nerd-fonts/releases/download/v1.2.0/AnonymousPro.zip)
 - [Others @ powerline fonts](https://github.com/ryanoasis/nerd-fonts)
 
 Open the downloaded font and press "Install Font".
