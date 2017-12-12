@@ -47,7 +47,7 @@ brew cask install iterm2
 
 Get the iTerm color settings:
 
-- [Material Design Theme](https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors)
+- [Cyber Theme](https://raw.githubusercontent.com/fisherman/cyber/master/Cyber.itermcolors)
 - [More themes @ iterm2colorschemes](http://iterm2colorschemes.com)
 
 Just save it somewhere and open the file(s).
@@ -57,7 +57,7 @@ You can create a different profile, other than Default if you wish to do so.
 
 #### Install Patched Font
 
-- [Meslo M-DZ Mono](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf)
+- [Anonymice Nerd Font](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/AnonymousPro/complete/Anonymice%20Nerd%20Font%20Complete%20Mono.ttf)
 - [Others @ powerline fonts](https://github.com/ryanoasis/nerd-fonts)
 
 Open the downloaded font and press "Install Font".
@@ -97,6 +97,7 @@ $ fisher await
 $ fisher edc/bass
 $ fisher omf/battery
 $ fisher laughedelic/brew-completions
+$ fisher cyber
 $
 $ brew install terminal-notifier
 $ fisher done
@@ -144,6 +145,10 @@ OS X and Linux compatible battery utility.
 - [Brew Completions](https://github.com/laughedelic/brew-completions)
 
 Fish shell completions for Homebrew.
+
+- [Cyber Theme](https://github.com/fisherman/cyber)
+
+Simple prompt inspired by "hacking" the kernel.
 
 - [done](https://github.com/fisherman/done)
 
