@@ -39,6 +39,10 @@ $ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/m
 
 - [Download](http://www.iterm2.com/downloads.html) and install iTerm2 (it has better color fidelity than the built in Terminal).
 
+```shell
+brew cask install iterm2
+```
+
 #### Install Color Scheme
 
 Get the iTerm color settings:
@@ -88,71 +92,84 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fishe
 #### Install Themes and Plugins
 
 ```shell
-$ brew install jq
-$ fisher omf/spark omf/license omf/battery omf/await omf/errno omf/brew omf/node-binpath omf/pj
-$ set -U PROJECT_PATHS ~/Library/Projects
+$ fisher anicode
+$ fisher await
+$ fisher edc/bass
+$ fisher laughedelic/brew-completions
 $
-$ fisher bobthefish
-$ set -U theme_title_display_process yes
-$ set -U theme_title_display_path yes
-$ set -U theme_title_display_user yes
-$ set -U theme_title_use_abbreviated_path yes
-$ set -U theme_display_ruby no
-$ set -U theme_display_git yes
-$ set -U theme_display_git_untracked yes
-$ set -U theme_display_git_ahead_verbose yes
-$ set -U theme_display_cmd_duration yes
-$ set -U theme_show_exit_status yes
-$ set -U theme_git_worktree_support no
-$ set -U theme_color_scheme dark
-$ fish_update_completions
+$ brew install terminal-notifier
+$ fisher done
+$
+$ fisher Shadowigor/plugin-errno-grep
+$
+$ brew install fzy
+$ fisher fzy
+$
+$ fisher laughedelic/pisces
+$ fisher shark
+$
+$ brew install thefuck
+$ fisher omf/thefuck
+$
+$ fisher upto
+$ fisher z
 ```
 
-- [BobTheFish Theme](https://github.com/oh-my-fish/theme-bobthefish)
+- [Anicode](https://github.com/fisherman/anicode)
 
-A theme for nerds, makes fish even more powerful.
-It's equipped with a hell of a lot of nice functions and key bindings to speed up your workflow.
+Find arbitrary unicode characters matching a search pattern.
+The last result match will be copied to your clipboard.
 
-- [Spark](https://github.com/oh-my-fish/plugin-spark)
+- [Await](https://github.com/fisherman/await)
 
-Sparklines for your shell.
-More documentation is available [here](https://github.com/holman/spark).
-For instance, you can use it to quickly build a sparkline for Git commits by author `git shortlog -s | cut -f1 | spark`.
+Wait for background jobs.
 
-- [License](https://github.com/oh-my-fish/plugin-license)
+- [Bass](https://github.com/edc/bass)
 
-Fish Shell plugin for generating github licenses.
-As an external dependency it requires `jq` to be installed.
+Bass makes it easy to use utilities written for Bash in fish shell.
 
-- [Battery](https://github.com/oh-my-fish/plugin-battery)
+- [Brew Completions](https://github.com/laughedelic/brew-completions)
 
-Display battery slots in your terminal by calling `battery`.
+Fish shell completions for Homebrew.
 
-- [Await](https://github.com/oh-my-fish/plugin-await)
+- [done](https://github.com/fisherman/done)
 
-Wait last background job with a nice progress spinner.
-`sleep 10 & await`, `git pull origin master & await`, etc...
+A fish plugin to automatically receive notifications when long processes finish.
 
-- [ErrNo](https://github.com/oh-my-fish/plugin-errno)
+- [errno-grep](https://github.com/Shadowigor/plugin-errno-grep)
 
-Translate error codes to return status codes or lookup them by message strings.
-It has completions, so you can easily navigate through `errno` and `strerror`.
+Search for error codes, labels or messages via `errno-grep`.
 
-- [Brew](https://github.com/oh-my-fish/plugin-brew)
+- [fzy](https://github.com/fisherman/fzy)
 
-Oh My Fish plugin to integrate Homebrew paths into shell.
+`fzy` picks up history item and adds it to your shell.
+You need to execute manually.
 
-- [Node BinPath](https://github.com/oh-my-fish/plugin-node-binpath)
+Run `fkill` and type process you want to kill.
+`fkill` kills immediately.
+Press enter and process will be killed.
 
-Automatically add `node_modules/.bin` to PATH when present.
-Useful, when you don't want to have globally installed npm packages, but has local installments in your project.
-It allows to call, i.e. `mocha` as it was installed globally, but from your current project folder.
+- [pisces](https://github.com/laughedelic/pisces)
 
-- [PJ](https://github.com/oh-my-fish/plugin-pj)
+pisces is a plugin for fish that helps you to work with paired symbols like `()` and `''` in the command line.
+Just as in your favorite text editor!
 
-PJ allows you to easily jump between your favourite directories in a predictable manner.
-You tell pj where to look for your projects, and it will allow you to jump to them easily with tab completion.
-It even provides a convenient ability to open an editor in that directory from anywhere!
+- [Shark](https://github.com/fisherman/shark)
+
+Shark is a sparkline generator for fish.
+
+- [The Fuck](https://github.com/oh-my-fish/plugin-thefuck)
+
+This plug-in creates the necessary function to be used with The Fuck.
+
+- [upto](https://github.com/fisherman/upto)
+
+Gets you to a parent folder, heavily inspired by the plugin upto made by driv.
+
+- [z](https://github.com/fisherman/z)
+
+`z` tracks the directories you visit.
+With a combination of frequency and recency, it enables you to jump to the directory in mind.
 
 ## License
 
