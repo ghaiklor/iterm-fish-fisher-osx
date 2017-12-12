@@ -10,6 +10,26 @@ I'd like to improve this script, so it could work without any errors during the 
 Every time, I've re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
 I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so, and share it with you all.
 
+## Key Features
+
+- Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisherman.
+- Installs Material Design color preset for iTerm2 and patched Meslo Nerd Font.
+- Theme `bobthefish`, which is based on popular `agnoster`.
+- Completions for `brew`, `git`, `./node_modules/.bin` and so on, so on...
+- Installs a lot of useful plugins, explained below.
+- `await` function that waits for background jobs to finish with a nice spinner. i.e. `sleep 5 & await`.
+- `bass` plugin that makes easy to use utilities written for Bash Shell in Fish Shell.
+- `battery` function shows current level of the battery.
+- Plugin `done` that notifies you when the process is finished. i.e. you can run `npm install` command and switch back into your browser. When `npm install` is done, you will get OSX notification.
+- `errno-grep` function allows to search POSIX error codes and their messages.
+- `license` function for generating GitHub license in your current folder.
+- Plugin `pisces` that helps to you work with paired symbols like `()` or `''` in the command line.
+- `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
+- `shark` function build sparklines right in your terminal.
+- `fuck` function, I believe, everyone heard of it and what's doing.
+- `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
+- Plugin `z` allows to use <key>Ctrl + R</key> hotkey to show you the history of your commands and search in them.
+
 ## How To Setup
 
 You can achieve the same setup as mine, by manually setting up the environment ([following the guide](#manual-installation) below) or automatically [by executing the installer](#automatic-installation) `install.sh`.
