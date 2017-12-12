@@ -10,6 +10,10 @@ I'd like to improve this script, so it could work without any errors during the 
 Every time, I've re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
 I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so, and share it with you all.
 
+## Screenshots
+
+There are a lot of screenshots available [here](./SCREENSHOTS.md).
+
 ## Key Features
 
 - Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisherman.
