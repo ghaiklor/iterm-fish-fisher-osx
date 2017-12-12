@@ -95,6 +95,7 @@ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fishe
 $ fisher anicode
 $ fisher await
 $ fisher edc/bass
+$ fisher omf/battery
 $ fisher laughedelic/brew-completions
 $
 $ brew install terminal-notifier
@@ -105,7 +106,15 @@ $
 $ brew install fzy
 $ fisher fzy
 $
+$ brew install jq
+$ fisher omf/license
+$
+$ fisher omf/node-binpath
 $ fisher laughedelic/pisces
+$
+$ fisher omf/pj
+$ set -U PROJECT_PATHS ~/Library/Projects
+$
 $ fisher shark
 $
 $ brew install thefuck
@@ -128,6 +137,10 @@ Wait for background jobs.
 
 Bass makes it easy to use utilities written for Bash in fish shell.
 
+- [Battery](https://github.com/oh-my-fish/plugin-battery)
+
+OS X and Linux compatible battery utility.
+
 - [Brew Completions](https://github.com/laughedelic/brew-completions)
 
 Fish shell completions for Homebrew.
@@ -149,10 +162,24 @@ Run `fkill` and type process you want to kill.
 `fkill` kills immediately.
 Press enter and process will be killed.
 
+- [License](https://github.com/oh-my-fish/plugin-license)
+
+Fish Shell plugin for generating GitHub licenses.
+
+- [Node BinPath](https://github.com/oh-my-fish/plugin-node-binpath)
+
+Automatically add `node_modules/.bin` to `PATH` when present.
+
 - [pisces](https://github.com/laughedelic/pisces)
 
 pisces is a plugin for fish that helps you to work with paired symbols like `()` and `''` in the command line.
 Just as in your favorite text editor!
+
+- [PJ](https://github.com/oh-my-fish/plugin-pj)
+
+`pj` allows you to easily jump between your favourite directories in a predictable manner.
+You tell pj where to look for your projects, and it will allow you to jump to them easily with tab completion.
+It even provides a convenient ability to open an editor in that directory from anywhere!
 
 - [Shark](https://github.com/fisherman/shark)
 
