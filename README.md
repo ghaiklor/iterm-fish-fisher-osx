@@ -85,8 +85,6 @@ $ chsh -s /usr/local/bin/fish
 curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
 ```
 
-_If something goes wrong call `omf doctor`_.
-
 #### Install Themes and Plugins
 
 ```shell
