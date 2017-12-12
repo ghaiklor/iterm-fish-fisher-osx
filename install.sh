@@ -4,7 +4,7 @@
 #author         :ghaiklor
 #date           :2017-12-10
 #version        :0.1
-#usage          :bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install.sh)
+#usage          :bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install.sh)
 #bash_version   :3.2.57(1)-release
 #===================================================================================
 
@@ -12,12 +12,12 @@ set -e
 trap on_sigterm SIGINT SIGTERM
 
 TEMP_DIR=$(mktemp -d)
-GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-omf-osx/"
+GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisherman-osx/"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
 FISHERMAN_URL="https://git.io/fisher"
-PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-omf-osx/master/install_plugins.sh"
+PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install_plugins.sh"
 RESET_COLOR="\033[0m"
 RED_COLOR="\033[0;31m"
 GREEN_COLOR="\033[0;32m"
