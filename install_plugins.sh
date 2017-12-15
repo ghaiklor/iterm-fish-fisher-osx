@@ -23,6 +23,9 @@ fisher Shadowigor/plugin-errno-grep
 brew install fzy
 fisher fzy
 
+brew install grc
+fisher omf/grc
+
 brew install jq
 fisher omf/license
 
