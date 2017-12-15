@@ -1,5 +1,9 @@
 # Screenshots
 
+## GIF Demo
+
+![GIF Demo](https://user-images.githubusercontent.com/3625244/34063938-24145544-e1fe-11e7-826d-0f3f22547bcd.gif)
+
 ## Installer
 
 <img width="896" alt="Screenshot" src="https://user-images.githubusercontent.com/3625244/33886397-24b15d00-df4f-11e7-9cb2-30d618d385c7.png">
@@ -7,7 +11,6 @@
 
 ## Fish Shell
 
-![GIF Demo](https://user-images.githubusercontent.com/3625244/34063938-24145544-e1fe-11e7-826d-0f3f22547bcd.gif)
 <img width="896" alt="Screenshot" src="https://user-images.githubusercontent.com/3625244/33885323-b388447a-df4b-11e7-9b1d-71a6479420f0.png">
 <img width="896" alt="Screenshot" src="https://user-images.githubusercontent.com/3625244/33885324-b3a4b376-df4b-11e7-82a4-6fc8e0733c69.png">
 <img width="896" alt="Screenshot" src="https://user-images.githubusercontent.com/3625244/33885325-b3c2463e-df4b-11e7-8096-03b1f1a009b1.png">
