@@ -123,6 +123,9 @@ $
 $ brew install fzy
 $ fisher fzy
 $
+$ brew install grc
+$ fisher omf/grc
+$
 $ brew install jq
 $ fisher omf/license
 $
@@ -182,6 +185,10 @@ You need to execute manually.
 Run `fkill` and type process you want to kill.
 `fkill` kills immediately.
 Press enter and process will be killed.
+
+- [GRC](https://github.com/oh-my-fish/plugin-grc)
+
+Generic Colouriser is yet another colouriser for beautifying your logfiles or output of commands.
 
 - [License](https://github.com/oh-my-fish/plugin-license)
 
