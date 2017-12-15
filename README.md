@@ -26,13 +26,14 @@ There are a lot of screenshots available [here](./SCREENSHOTS.md).
 - `battery` function shows current level of the battery.
 - Plugin `done` that notifies you when the process is finished. i.e. you can run `npm install` command and switch back into your browser. When `npm install` is done, you will get OSX notification.
 - `errno-grep` function allows to search POSIX error codes and their messages.
+- `fzy` plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
 - `license` function for generating GitHub license in your current folder.
 - Plugin `pisces` that helps to you work with paired symbols like `()` or `''` in the command line.
 - `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
 - `shark` function build sparklines right in your terminal.
 - `fuck` function, I believe, everyone heard of it and what's doing.
 - `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
-- Plugin `z` allows to use <key>Ctrl + R</key> hotkey to show you the history of your commands and search in them.
+- `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
 
 ## How To Setup
 
