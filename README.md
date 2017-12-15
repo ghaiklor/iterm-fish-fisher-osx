@@ -16,11 +16,15 @@ There are a lot of screenshots available [here](./SCREENSHOTS.md).
 
 ## Key Features
 
+The script installs things related to terminal environment only:
+
 - Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisherman.
 - Installs Material Design color preset for iTerm2 and patched Meslo Nerd Font.
 - Theme `bobthefish`, which is based on popular `agnoster`.
 - Completions for `brew`, `git`, `./node_modules/.bin` and so on, so on...
-- Installs a lot of useful plugins, explained below.
+
+Installs a lot of useful plugins for Fish Shell:
+
 - `await` function that waits for background jobs to finish with a nice spinner. i.e. `sleep 5 & await`.
 - `bass` plugin that makes easy to use utilities written for Bash Shell in Fish Shell.
 - `battery` function shows current level of the battery.
