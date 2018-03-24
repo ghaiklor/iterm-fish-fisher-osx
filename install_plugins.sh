@@ -1,6 +1,6 @@
 #!/usr/bin/env fish
 #title          :install_plugins.sh
-#description    :This script will install and configure themes and plugins for Oh My Fish.
+#description    :This script will install and configure themes and plugins for Fish Shell.
 #author         :ghaiklor
 #date           :2017-12-11
 #version        :0.1
@@ -30,15 +30,11 @@ brew install jq
 fisher omf/license
 
 fisher omf/node-binpath
-fisher laughedelic/pisces
 
 fisher omf/pj
 set -U PROJECT_PATHS ~/Library/Projects
 
 fisher shark
-
-fisher omf/thefuck
-brew install thefuck
 
 fisher upto
 fisher z
