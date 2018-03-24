@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 #title          :install.sh
-#description    :This script will install and configure Fish Shell + Oh My Fish.
+#description    :This script will install and configure Fish Shell + Fisherman.
 #author         :ghaiklor
 #date           :2017-12-10
 #version        :0.1
@@ -9,7 +9,7 @@
 #===================================================================================
 
 set -e
-trap on_sigterm SIGINT SIGTERM
+trap on_sigterm SIGKILL SIGTERM
 
 TEMP_DIR=$(mktemp -d)
 GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisherman-osx/"
