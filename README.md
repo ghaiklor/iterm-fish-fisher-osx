@@ -32,10 +32,8 @@ Installs a lot of useful plugins for Fish Shell:
 - `errno-grep` function allows to search POSIX error codes and their messages.
 - `fzy` plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
 - `license` function for generating GitHub license in your current folder.
-- Plugin `pisces` that helps to you work with paired symbols like `()` or `''` in the command line.
 - `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
 - `shark` function build sparklines right in your terminal.
-- `fuck` function, I believe, everyone heard of it and what's doing.
 - `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
 - `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
 
@@ -135,15 +133,11 @@ $ brew install jq
 $ fisher omf/license
 $
 $ fisher omf/node-binpath
-$ fisher laughedelic/pisces
 $
 $ fisher omf/pj
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
 $ fisher shark
-$
-$ fisher omf/thefuck
-$ brew install thefuck
 $
 $ fisher upto
 $ fisher z
@@ -203,11 +197,6 @@ Fish Shell plugin for generating GitHub licenses.
 
 Automatically add `node_modules/.bin` to `PATH` when present.
 
-- [pisces](https://github.com/laughedelic/pisces)
-
-pisces is a plugin for fish that helps you to work with paired symbols like `()` and `''` in the command line.
-Just as in your favorite text editor!
-
 - [PJ](https://github.com/oh-my-fish/plugin-pj)
 
 `pj` allows you to easily jump between your favourite directories in a predictable manner.
@@ -217,10 +206,6 @@ It even provides a convenient ability to open an editor in that directory from a
 - [Shark](https://github.com/fisherman/shark)
 
 Shark is a sparkline generator for fish.
-
-- [The Fuck](https://github.com/oh-my-fish/plugin-thefuck)
-
-This plug-in creates the necessary function to be used with The Fuck.
 
 - [upto](https://github.com/fisherman/upto)
 
