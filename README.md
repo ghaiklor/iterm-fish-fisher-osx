@@ -1,5 +1,7 @@
 # iTerm 2 + Fish Shell + Fisherman + Themes\Plugins
 
+_Forked from ghaiklor/iterm-fish-fisherman-osx (https://github.com/ghaiklor/iterm-fish-fisherman-osx)_
+
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
 Please, raise your issue if something strange happened.
@@ -26,11 +28,18 @@ The script installs things related to terminal environment only:
 Installs a lot of useful plugins for Fish Shell:
 
 - `await` function that waits for background jobs to finish with a nice spinner. i.e. `sleep 5 & await`.
+- `bat` A cat clone with syntax highlighting for a large number of programming and markup languages
 - `bass` plugin that makes easy to use utilities written for Bash Shell in Fish Shell.
 - `battery` function shows current level of the battery.
 - Plugin `done` that notifies you when the process is finished. i.e. you can run `npm install` command and switch back into your browser. When `npm install` is done, you will get OSX notification.
 - `errno-grep` function allows to search POSIX error codes and their messages.
+- `fd` a simple, fast and user-friendly alternative to 'find'
+- `ncdu` Ncdu is a disk usage analyzer with an ncurses interface
 - `fzy` plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
+- `fzf` another yet plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
+- `diff-so-fancy` strives to make your diff's human readable instead of machine readable
+- `httpie` HTTPie—aitch-tee-tee-pie—is a command line HTTP client with an intuitive UI
+- `htop` interactive and alternative of 'top'.
 - `license` function for generating GitHub license in your current folder.
 - `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
 - `shark` function build sparklines right in your terminal.
@@ -47,7 +56,7 @@ __Highly recommended__ to run the script below under Bash session in default Ter
 I can not guarantee proper installation outside of Terminal.app + Bash Shell.
 
 ```shell
-$ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/rgaidot/iterm-fish-fisherman-osx/master/install.sh)
 ```
 
 ## Manual Installation
@@ -118,19 +127,34 @@ $ fisher omf/battery
 $ fisher omf/theme-bobthefish
 $ fisher laughedelic/brew-completions
 $
+$ brew install bat
+$
+$ brew install diff-so-fancy
+$
+$ brew install httpie
+$
+$ brew install htop
+$
 $ brew install terminal-notifier
 $ fisher done
 $
 $ fisher Shadowigor/plugin-errno-grep
 $
+$ brew install fd
+$
 $ brew install fzy
 $ fisher fzy
+$
+$ brew install fzf
+$ fisher fzf
 $
 $ brew install grc
 $ fisher omf/grc
 $
 $ brew install jq
 $ fisher omf/license
+$
+$ brew install ncdu
 $
 $ fisher omf/node-binpath
 $
@@ -151,6 +175,18 @@ The last result match will be copied to your clipboard.
 - [Await](https://github.com/fisherman/await)
 
 Wait for background jobs.
+
+- [bat](https://github.com/sharkdp/bat)
+
+A cat clone with syntax highlighting for a large number of programming and markup languages
+
+- [httpie](https://httpie.org/)
+
+HTTPie consists of a single http command designed for painless debugging and interaction with HTTP servers, RESTful APIs, and web services
+
+- [htop](https://github.com/hishamhm/htop)
+
+htop is an interactive text-mode process viewer for Unix systems. It aims to be a better 'top'.
 
 - [Bass](https://github.com/edc/bass)
 
@@ -176,6 +212,20 @@ A fish plugin to automatically receive notifications when long processes finish.
 
 Search for error codes, labels or messages via `errno-grep`.
 
+- [diff-so-fancy](https://github.com/so-fancy/diff-so-fancy)
+
+diff-so-fancy strives to make your diff's human readable instead of machine readable. This helps improve code quality and help you spot defects faster.
+
+Configure git to use diff-so-fancy for all diff output:
+
+```
+git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
+```
+
+- [fd](https://github.com/sharkdp/fd)
+
+`fd` is a simple, fast and user-friendly alternative to find.
+
 - [fzy](https://github.com/fisherman/fzy)
 
 `fzy` picks up history item and adds it to your shell.
@@ -184,6 +234,19 @@ You need to execute manually.
 Run `fkill` and type process you want to kill.
 `fkill` kills immediately.
 Press enter and process will be killed.
+
+- [fzf](https://github.com/jethrokuan/fzf)
+
+`fzf` picks up history item and adds it to your shell.
+
+Fish function
+
+```
+function preview --description 'Combines fzf with bat for the preview and a custom key binding to open VS Code'
+  fzf --height 40% --preview 'if file -i {}|grep -q binary; then file -b {}; else bat --color \"always\" --line-range :40 {}; fi'
+  set -x FZF_DEFAULT_OPTS "--bind='ctrl-o:execute(code {})+abort'"
+end
+```
 
 - [GRC](https://github.com/oh-my-fish/plugin-grc)
 
@@ -196,6 +259,18 @@ Fish Shell plugin for generating GitHub licenses.
 - [Node BinPath](https://github.com/oh-my-fish/plugin-node-binpath)
 
 Automatically add `node_modules/.bin` to `PATH` when present.
+
+- [ncdu](https://dev.yorhel.nl/ncdu)
+
+Ncdu is a disk usage analyzer with an ncurses interface
+
+Fish function
+
+```
+function du --description 'Overrride du cmd by using ncdu'
+    ncdu --color dark -rr -x --exclude .git --exclude node_modules
+end
+```
 
 - [PJ](https://github.com/oh-my-fish/plugin-pj)
 
