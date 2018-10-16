@@ -111,36 +111,35 @@ $ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fis
 #### Install Themes and Plugins
 
 ```shell
-$ fisher igalic/anicode
-$ fisher fisherman/await
-$ fisher edc/bass
-$ fisher oh-my-fish/plugin-battery
-$ fisher oh-my-fish/theme-bobthefish
-$ fisher laughedelic/brew-completions
-$
-$ brew install terminal-notifier
-$ fisher franciscolourenco/done
-$
-$ fisher Shadowigor/plugin-errno-grep
-$
-$ brew install fzy
-$ fisher gyakovlev/fish-fzy
-$
-$ brew install grc
-$ fisher oh-my-fish/plugin-grc
-$
-$ brew install jq
-$ fisher oh-my-fish/plugin-license
-$
-$ fisher oh-my-fish/plugin-node-binpath
-$
-$ fisher oh-my-fish/plugin-pj
-$ set -U PROJECT_PATHS ~/Library/Projects
-$
-$ fisher fisherman/shark
-$
-$ fisher Markcial/upto
-$ fisher jethrokuan/z
+fisher add igalic/anicode
+fisher add fisherman/await
+fisher add edc/bass
+fisher add oh-my-fish/plugin-battery
+fisher add oh-my-fish/theme-bobthefish
+fisher add laughedelic/brew-completions
+
+brew install terminal-notifier
+fisher add franciscolourenco/done
+
+fisher add Shadowigor/plugin-errno-grep
+
+brew install fzy
+fisher add gyakovlev/fish-fzy
+
+brew install grc
+fisher add oh-my-fish/plugin-grc
+
+brew install jq
+fisher add oh-my-fish/plugin-license
+
+fisher add oh-my-fish/plugin-node-binpath
+
+fisher add oh-my-fish/plugin-pj
+set -U PROJECT_PATHS ~/Library/Projects
+
+fisher add fisherman/shark
+fisher add Markcial/upto
+fisher add jethrokuan/z
 ```
 
 - [Anicode](https://github.com/fisherman/anicode)
