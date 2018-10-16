@@ -8,36 +8,35 @@
 #fish_version   :2.7.0
 #===================================================================================
 
-fisher anicode
-fisher await
-fisher edc/bass
-fisher omf/battery
-fisher omf/theme-bobthefish
-fisher laughedelic/brew-completions
+fisher add igalic/anicode
+fisher add fisherman/await
+fisher add edc/bass
+fisher add oh-my-fish/plugin-battery
+fisher add oh-my-fish/theme-bobthefish
+fisher add laughedelic/brew-completions
 
 brew install terminal-notifier
-fisher done
+fisher add franciscolourenco/done
 
-fisher Shadowigor/plugin-errno-grep
+fisher add Shadowigor/plugin-errno-grep
 
 brew install fzy
-fisher fzy
+fisher add gyakovlev/fish-fzy
 
 brew install grc
-fisher omf/grc
+fisher add oh-my-fish/plugin-grc
 
 brew install jq
-fisher omf/license
+fisher add oh-my-fish/plugin-license
 
-fisher omf/node-binpath
+fisher add oh-my-fish/plugin-node-binpath
 
-fisher omf/pj
+fisher add oh-my-fish/plugin-pj
 set -U PROJECT_PATHS ~/Library/Projects
 
-fisher shark
+fisher add fisherman/shark
+fisher add Markcial/upto
+fisher add jethrokuan/z
 
-fisher upto
-fisher z
-
-fisher up
+fisher self-update
 fish_update_completions
