@@ -111,36 +111,36 @@ $ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fis
 #### Install Themes and Plugins
 
 ```shell
-$ fisher anicode
-$ fisher await
+$ fisher igalic/anicode
+$ fisher fisherman/await
 $ fisher edc/bass
-$ fisher omf/battery
-$ fisher omf/theme-bobthefish
+$ fisher oh-my-fish/plugin-battery
+$ fisher oh-my-fish/theme-bobthefish
 $ fisher laughedelic/brew-completions
 $
 $ brew install terminal-notifier
-$ fisher done
+$ fisher franciscolourenco/done
 $
 $ fisher Shadowigor/plugin-errno-grep
 $
 $ brew install fzy
-$ fisher fzy
+$ fisher gyakovlev/fish-fzy
 $
 $ brew install grc
-$ fisher omf/grc
+$ fisher oh-my-fish/plugin-grc
 $
 $ brew install jq
-$ fisher omf/license
+$ fisher oh-my-fish/plugin-license
 $
-$ fisher omf/node-binpath
+$ fisher oh-my-fish/plugin-node-binpath
 $
-$ fisher omf/pj
+$ fisher oh-my-fish/plugin-pj
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
-$ fisher shark
+$ fisher fisherman/shark
 $
-$ fisher upto
-$ fisher z
+$ fisher Markcial/upto
+$ fisher jethrokuan/z
 ```
 
 - [Anicode](https://github.com/fisherman/anicode)
