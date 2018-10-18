@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 #title          :install.sh
-#description    :This script will install and configure Fish Shell + Fisherman.
+#description    :This script will install and configure Fish Shell + Fisher.
 #author         :ghaiklor
 #date           :2017-12-10
 #version        :0.1
-#usage          :bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install.sh)
+#usage          :bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install.sh)
 #bash_version   :3.2.57(1)-release
 #===================================================================================
 
@@ -12,12 +12,12 @@ set -e
 trap on_sigterm SIGKILL SIGTERM
 
 TEMP_DIR=$(mktemp -d)
-GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisherman-osx/"
+GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisher-osx/"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
 FISHERMAN_URL="https://git.io/fisher"
-PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install_plugins.sh"
+PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh"
 RESET_COLOR="\033[0m"
 RED_COLOR="\033[0;31m"
 GREEN_COLOR="\033[0;32m"
@@ -54,13 +54,13 @@ function hello() {
     echo " / __/ (__  ) / / /  (__  ) / / /  __/ / /    "
     echo "/_/ /_/____/_/ /_/  /____/_/ /_/\___/_/_/     "
     echo "                                              "
-    echo "           iTerm + Fish + Fisherman           "
+    echo "           iTerm + Fish + Fisher              "
     echo "                 by @ghaiklor                 "
     echo "                                              "
     echo "                                              "
 
     blue_color
-    echo "This script will guide you through installing all the required dependencies for Fish Shell + Fisherman + Themes and Plugins"
+    echo "This script will guide you through installing all the required dependencies for Fish Shell + Fisher + Themes and Plugins"
     echo "It will not install anything, without your direct agreement (do not afraid)"
 
     green_color
@@ -273,7 +273,7 @@ function install_fish() {
 
 function install_fisherman() {
     blue_color
-    echo "Fisherman is required for the installation"
+    echo "Fisher is required for the installation"
 
     green_color
     read -p "Do you agree to install it? (y/N) " -n 1 answer
@@ -283,12 +283,12 @@ function install_fisherman() {
     fi
 
     blue_color
-    echo "Installing Fisherman..."
+    echo "Installing Fisher..."
 
     curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs ${FISHERMAN_URL}
 
     green_color
-    echo "Fisherman installed!"
+    echo "Fisher installed!"
 
     reset_color
     separator
@@ -297,10 +297,10 @@ function install_fisherman() {
 
 function install_fisherman_plugins_and_themes() {
     blue_color
-    echo "Some of the Fisherman plugins requires external dependencies to be installed via Homebrew..."
+    echo "Some of the Fisher plugins requires external dependencies to be installed via Homebrew..."
 
     green_color
-    read -p "Do you want to install Themes and Plugins for Fisherman? (y/N) " -n 1 answer
+    read -p "Do you want to install Themes and Plugins for Fisher? (y/N) " -n 1 answer
     echo
     if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
         blue_color
