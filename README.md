@@ -1,4 +1,4 @@
-# iTerm 2 + Fish Shell + Fisherman + Themes\Plugins
+# iTerm 2 + Fish Shell + Fisher + Themes\Plugins
 
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
@@ -18,7 +18,7 @@ They are available [here](./SCREENSHOTS.md).
 
 The script installs things related to terminal environment only:
 
-- Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisherman.
+- Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisher.
 - Installs Material Design color preset for iTerm2 and patched Meslo Nerd Font.
 - Theme `bobthefish`, which is based on popular `agnoster`.
 - Completions for `brew`, `git`, `./node_modules/.bin` and so on, so on...
@@ -47,7 +47,7 @@ __Highly recommended__ to run the script below under Bash session in default Ter
 I can not guarantee proper installation outside of Terminal.app + Bash Shell.
 
 ```shell
-$ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisherman-osx/master/install.sh)
+$ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install.sh)
 ```
 
 ## Manual Installation
@@ -100,12 +100,12 @@ $ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
 $ chsh -s /usr/local/bin/fish
 ```
 
-#### Install Fisherman
+#### Install Fisher
 
-[Fisherman](https://fisherman.github.io) is a plugin manager for Fish Shell.
+[Fisher](https://github.com/jorgebucaran/fisher) is a plugin manager for Fish Shell.
 
 ```shell
-$ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fisher
+$ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 ```
 
 #### Install Themes and Plugins
