@@ -26,6 +26,8 @@ brew install diff-so-fancy
 brew install terminal-notifier
 fisher done
 
+brew install tmate
+
 fisher Shadowigor/plugin-errno-grep
 
 brew install fd
@@ -50,6 +52,8 @@ fisher omf/pj
 set -U PROJECT_PATHS ~/Library/Projects
 
 fisher shark
+
+brew install vault
 
 fisher upto
 fisher z

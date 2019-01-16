@@ -43,7 +43,9 @@ Installs a lot of useful plugins for Fish Shell:
 - `license` function for generating GitHub license in your current folder.
 - `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
 - `shark` function build sparklines right in your terminal.
+- `tmate` terminal sharing
 - `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
+- `vault` Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
 - `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
 
 ## How To Setup
@@ -135,6 +137,8 @@ $ brew install httpie
 $
 $ brew install htop
 $
+$ brew install tmate
+$
 $ brew install terminal-notifier
 $ fisher done
 $
@@ -162,6 +166,8 @@ $ fisher omf/pj
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
 $ fisher shark
+$
+$ brew install vault
 $
 $ fisher upto
 $ fisher z
@@ -282,9 +288,17 @@ It even provides a convenient ability to open an editor in that directory from a
 
 Shark is a sparkline generator for fish.
 
+- [tmate](https://tmate.io/)
+
+Instant Terminal Sharing
+
 - [upto](https://github.com/fisherman/upto)
 
 Gets you to a parent folder, heavily inspired by the plugin upto made by driv.
+
+- [vault](https://www.vaultproject.io/)
+
+Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
 
 - [z](https://github.com/fisherman/z)
 
