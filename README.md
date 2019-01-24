@@ -37,6 +37,7 @@ Installs a lot of useful plugins for Fish Shell:
 - `ncdu` Ncdu is a disk usage analyzer with an ncurses interface
 - `fzy` plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
 - `fzf` another yet plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
+- `fx` cli tool and terminal JSON viewer.
 - `diff-so-fancy` strives to make your diff's human readable instead of machine readable
 - `httpie` HTTPie—aitch-tee-tee-pie—is a command line HTTP client with an intuitive UI
 - `htop` interactive and alternative of 'top'.
@@ -152,6 +153,8 @@ $
 $ brew install fzf
 $ fisher fzf
 $
+$ brew install fx
+$
 $ brew install grc
 $ fisher omf/grc
 $
@@ -253,6 +256,9 @@ function preview --description 'Combines fzf with bat for the preview and a cust
   set -x FZF_DEFAULT_OPTS "--bind='ctrl-o:execute(code {})+abort'"
 end
 ```
+
+- [fzf](https://github.com/antonmedv/fx)
+fzf, cli tool and terminal JSON viewer.
 
 - [GRC](https://github.com/oh-my-fish/plugin-grc)
 

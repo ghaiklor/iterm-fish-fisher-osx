@@ -38,6 +38,8 @@ fisher fzy
 brew install fzf
 fisher fzf
 
+brew install fx
+
 brew install grc
 fisher omf/grc
 
