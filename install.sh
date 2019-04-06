@@ -15,7 +15,7 @@ TEMP_DIR=$(mktemp -d)
 GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisher-osx/"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
-NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
+NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/25eec835188d2316ef3fe59820950d9f90c5bcf4/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.ttf?raw=true"
 FISHERMAN_URL="https://git.io/fisher"
 PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh"
 RESET_COLOR="\033[0m"
@@ -210,7 +210,7 @@ function install_nerd_font() {
         echo "Downloading Nerd Font into ${TEMP_DIR}..."
 
         cd ${TEMP_DIR}
-        curl -fsSL ${NERD_FONT_URL} > ./nerd_font.otf
+        curl -fsSL ${NERD_FONT_URL} > ./nerd_font.ttf
 
         blue_color
         echo "Font Manager will be opened in 5 seconds, prompting to install Nerd Font"
