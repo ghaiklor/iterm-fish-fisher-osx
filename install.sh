@@ -216,7 +216,7 @@ function install_nerd_font() {
         echo "Font Manager will be opened in 5 seconds, prompting to install Nerd Font"
         echo "When you will be done with installing Nerd Font, close the Font Manager"
         sleep 5
-        open -W ./nerd_font.otf
+        open -W ./nerd_font.ttf
 
         green_color
         echo "Nerd Font is successfully installed!"
