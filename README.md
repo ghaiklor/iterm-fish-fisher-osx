@@ -25,7 +25,6 @@ The script installs things related to terminal environment only:
 
 Installs a lot of useful plugins for Fish Shell:
 
-- `await` function that waits for background jobs to finish with a nice spinner. i.e. `sleep 5 & await`.
 - `bass` plugin that makes easy to use utilities written for Bash Shell in Fish Shell.
 - `battery` function shows current level of the battery.
 - Plugin `done` that notifies you when the process is finished. i.e. you can run `npm install` command and switch back into your browser. When `npm install` is done, you will get OSX notification.
@@ -112,7 +111,6 @@ $ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.
 
 ```shell
 fisher add igalic/anicode
-fisher add fisherman/await
 fisher add edc/bass
 fisher add oh-my-fish/plugin-battery
 fisher add oh-my-fish/theme-bobthefish
@@ -146,10 +144,6 @@ fisher add jethrokuan/z
 
 Find arbitrary unicode characters matching a search pattern.
 The last result match will be copied to your clipboard.
-
-- [Await](https://github.com/fisherman/await)
-
-Wait for background jobs.
 
 - [Bass](https://github.com/edc/bass)
 
