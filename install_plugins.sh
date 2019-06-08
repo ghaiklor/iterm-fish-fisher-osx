@@ -9,7 +9,6 @@
 #===================================================================================
 
 fisher add igalic/anicode
-fisher add fisherman/await
 fisher add edc/bass
 fisher add oh-my-fish/plugin-battery
 fisher add oh-my-fish/theme-bobthefish
