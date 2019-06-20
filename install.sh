@@ -330,8 +330,8 @@ function post_install() {
     echo "Setup was successfully done"
     echo "Do not forgot to make two simple, but manual things:"
     echo
-    echo "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply color preset"
-    echo "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply font (for non-ASCII as well)"
+    echo "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply material-design color preset"
+    echo "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply Meslo font (for non-ASCII as well)"
     echo
     echo "Happy Coding!"
 
