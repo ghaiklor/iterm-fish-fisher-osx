@@ -55,7 +55,7 @@ $ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-os
 
 #### Install iTerm 2
 
-- [Download](http://www.iterm2.com/downloads.html) and install iTerm2 (it has better color fidelity than the built in Terminal).
+- [Download](https://www.iterm2.com/downloads.html) and install iTerm2 (it has better color fidelity than the built in Terminal).
 
 ```shell
 $ brew cask install iterm2
@@ -75,7 +75,7 @@ You can create a different profile, other than Default if you wish to do so.
 
 #### Install Patched Font
 
-- [Meslo LG M DZ Regular Nerd Font Complete Mono](https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf)
+- [Meslo LG M DZ Regular Nerd Font Complete Mono](https://github.com/ryanoasis/nerd-fonts/blob/25eec835188d2316ef3fe59820950d9f90c5bcf4/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.ttf?raw=true)
 - [Others @ powerline fonts](https://github.com/ryanoasis/nerd-fonts)
 
 Open the downloaded font and press "Install Font".
