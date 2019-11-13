@@ -8,12 +8,12 @@
 #fish_version   :2.7.0
 #===================================================================================
 
-fisher anicode
-fisher await
-fisher edc/bass
-fisher omf/battery
-fisher omf/theme-bobthefish
-fisher laughedelic/brew-completions
+fisher add anicode
+fisher add await
+fisher add edc/bass
+fisher add omf/battery
+fisher add omf/theme-bobthefish
+fisher add laughedelic/brew-completions
 
 brew install bat
 
@@ -24,41 +24,41 @@ brew install htop
 brew install diff-so-fancy
 
 brew install terminal-notifier
-fisher done
+fisher add done
 
 brew install tmate
 
-fisher Shadowigor/plugin-errno-grep
+fisher add Shadowigor/plugin-errno-grep
 
 brew install fd
 
 brew install fzy
-fisher fzy
+fisher add fzy
 
 brew install fzf
-fisher fzf
+fisher add fzf
 
 brew install fx
 
 brew install grc
-fisher omf/grc
+fisher add omf/grc
 
 brew install jq
-fisher omf/license
+fisher add omf/license
 
 brew install ncdu
 
-fisher omf/node-binpath
+fisher add omf/node-binpath
 
-fisher omf/pj
+fisher add omf/pj
 set -U PROJECT_PATHS ~/Library/Projects
 
-fisher shark
+fisher add shark
 
 brew install vault
 
-fisher upto
-fisher z
+fisher add upto
+fisher add z
 
-fisher up
+fisher add up
 fish_update_completions
