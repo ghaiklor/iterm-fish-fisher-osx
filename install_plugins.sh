@@ -28,7 +28,7 @@ fisher add oh-my-fish/plugin-node-binpath
 fisher add jorgebucaran/fish-nvm
 
 fisher add oh-my-fish/plugin-pj
-set -Ugx PROJECT_PATHS ~/Library/Projects
+set -gx PROJECT_PATHS ~/Library/Projects
 
 fisher add Markcial/upto
 fisher add jethrokuan/z
