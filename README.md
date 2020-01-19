@@ -21,20 +21,16 @@ The script installs things related to terminal environment only:
 - Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisher.
 - Installs Material Design color preset for iTerm2 and patched Meslo Nerd Font.
 - Theme `bobthefish`, which is based on popular `agnoster`.
-- Completions for `brew`, `git`, `./node_modules/.bin` and so on, so on...
+- Completions for `brew`, `git`, `./node_modules/.bin` and others...
 
 Installs a lot of useful plugins for Fish Shell:
 
-- `bass` plugin that makes easy to use utilities written for Bash Shell in Fish Shell.
-- `battery` function shows current level of the battery.
+- `bass` plugin that makes easy to use scripts written for Bash Shell in Fish Shell.
 - Plugin `done` that notifies you when the process is finished. i.e. you can run `npm install` command and switch back into your browser. When `npm install` is done, you will get OSX notification.
-- `errno-grep` function allows to search POSIX error codes and their messages.
-- `fzy` plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
-- `license` function for generating GitHub license in your current folder.
+- `fzy` plugin adds a hotkey <kbd>Ctrl</kbd>+<kbd>R</kbd> that allows to show and search in your command history.
 - `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
-- `shark` function build sparklines right in your terminal.
 - `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
-- `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
+- ...and others, you can find the full list below in manual guide.
 
 ## How To Setup
 
