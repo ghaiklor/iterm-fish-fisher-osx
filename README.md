@@ -42,10 +42,27 @@ __Highly recommended__ to run the script below under Bash session in default Ter
 I can not guarantee proper installation outside of Terminal.app + Bash Shell.
 
 ```shell
-$ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install.sh)
 ```
 
 ## Manual Installation
+
+### Command Line Tools
+
+You don't need to install the whole Xcode for it.
+By executing the command below, you will get only the command line tools without heavy IDE and dependencies it take:
+
+```shell
+xcode-select --install
+```
+
+### Homebrew
+
+Homebrew is a software manager for MacOS.
+Its purpose is like the purpose of `apt-get` on Debian-based systems or `yum` on Fedora.
+You can install command line tools from there or even full-featured applications.
+
+[Install Homebrew](https://brew.sh)
 
 ### iTerm2
 
@@ -53,8 +70,10 @@ $ bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-os
 
 - [Download](https://www.iterm2.com/downloads.html) and install iTerm2 (it has better color fidelity than the built in Terminal).
 
+or install it via Homebrew:
+
 ```shell
-$ brew cask install iterm2
+brew cask install iterm2
 ```
 
 #### Install Color Scheme
@@ -89,10 +108,12 @@ Restart iTerm2 for all changes to take effect.
 
 Download and install [Fish Shell](https://fishshell.com).
 
+or using Homebrew:
+
 ```shell
-$ brew install fish
-$ echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
-$ chsh -s /usr/local/bin/fish
+brew install fish
+echo "/usr/local/bin/fish" | sudo tee -a /etc/shells
+chsh -s /usr/local/bin/fish
 ```
 
 #### Install Fisher
@@ -100,41 +121,10 @@ $ chsh -s /usr/local/bin/fish
 [Fisher](https://github.com/jorgebucaran/fisher) is a plugin manager for Fish Shell.
 
 ```shell
-$ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
+curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 ```
 
 #### Install Themes and Plugins
-
-```shell
-fisher add igalic/anicode
-fisher add edc/bass
-fisher add oh-my-fish/plugin-battery
-fisher add oh-my-fish/theme-bobthefish
-fisher add laughedelic/brew-completions
-
-brew install terminal-notifier
-fisher add franciscolourenco/done
-
-fisher add Shadowigor/plugin-errno-grep
-
-brew install fzy
-fisher add gyakovlev/fish-fzy
-
-brew install grc
-fisher add oh-my-fish/plugin-grc
-
-brew install jq
-fisher add oh-my-fish/plugin-license
-
-fisher add oh-my-fish/plugin-node-binpath
-
-fisher add oh-my-fish/plugin-pj
-set -U PROJECT_PATHS ~/Library/Projects
-
-fisher add fisherman/shark
-fisher add Markcial/upto
-fisher add jethrokuan/z
-```
 
 - [Anicode](https://github.com/fisherman/anicode)
 
@@ -144,10 +134,6 @@ The last result match will be copied to your clipboard.
 - [Bass](https://github.com/edc/bass)
 
 Bass makes it easy to use utilities written for Bash in fish shell.
-
-- [Battery](https://github.com/oh-my-fish/plugin-battery)
-
-OS X and Linux compatible battery utility.
 
 - [Bob The Fish](https://github.com/oh-my-fish/theme-bobthefish)
 
@@ -178,23 +164,19 @@ Press enter and process will be killed.
 
 Generic Colouriser is yet another colouriser for beautifying your logfiles or output of commands.
 
-- [License](https://github.com/oh-my-fish/plugin-license)
-
-Fish Shell plugin for generating GitHub licenses.
-
 - [Node BinPath](https://github.com/oh-my-fish/plugin-node-binpath)
 
 Automatically add `node_modules/.bin` to `PATH` when present.
+
+- [NVM (Node Version Manager)](https://github.com/jorgebucaran/fish-nvm)
+
+Pure-fish, Node.js version manager.
 
 - [PJ](https://github.com/oh-my-fish/plugin-pj)
 
 `pj` allows you to easily jump between your favourite directories in a predictable manner.
 You tell pj where to look for your projects, and it will allow you to jump to them easily with tab completion.
 It even provides a convenient ability to open an editor in that directory from anywhere!
-
-- [Shark](https://github.com/fisherman/shark)
-
-Shark is a sparkline generator for fish.
 
 - [upto](https://github.com/fisherman/upto)
 
