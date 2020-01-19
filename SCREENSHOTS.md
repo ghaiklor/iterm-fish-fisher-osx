@@ -1,5 +1,9 @@
 # Screenshots
 
+## Installer
+
+![Installer](https://user-images.githubusercontent.com/3625244/72685773-0ba5c300-3af6-11ea-8e78-79064584418b.gif)
+
 ## Plugins
 
 ### anicode
