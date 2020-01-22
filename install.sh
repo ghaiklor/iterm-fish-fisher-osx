@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 #title          :install.sh
 #description    :This script will install and configure Fish Shell + Fisherman.
-#author         :ghaiklor
-#date           :2017-12-10
+#author         :ghaiklor / rgaidot
+#date           :2020-01-22
 #version        :0.1
 #usage          :bash <(curl -s https://raw.githubusercontent.com/rgaidot/iterm-fish-fisherman-osx/master/install.sh)
 #bash_version   :3.2.57(1)-release
@@ -15,7 +15,7 @@ TEMP_DIR=$(mktemp -d)
 GITHUB_REPO_URL_BASE="https://github.com/rgaidot/iterm-fish-fisherman-osx/"
 HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
-NERD_FONT_URL="https://raw.githubusercontent.com/ryanoasis/nerd-fonts/master/patched-fonts/Meslo/M-DZ/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.otf"
+NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/master/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.ttf?raw=true"
 FISHERMAN_URL="https://git.io/fisher"
 PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/rgaidot/iterm-fish-fisherman-osx/master/install_plugins.sh"
 RESET_COLOR="\033[0m"
@@ -254,6 +254,7 @@ function install_fish() {
         echo "2) When changing your default shell via chsh -s"
 
         brew install fish
+        chsh -s /usr/local/bin/fish
     else
         blue_color
         echo "You already have Fish Shell installed"

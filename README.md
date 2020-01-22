@@ -168,8 +168,6 @@ $
 $ fisher add omf/pj
 $ set -U PROJECT_PATHS ~/Library/Projects
 $
-$ fisher add shark
-$
 $ brew install vault
 $
 $ fisher add upto

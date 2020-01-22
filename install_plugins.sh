@@ -1,18 +1,17 @@
 #!/usr/bin/env fish
 #title          :install_plugins.sh
 #description    :This script will install and configure themes and plugins for Fish Shell.
-#author         :ghaiklor
-#date           :2017-12-11
+#author         :ghaiklor / rgaidot
+#date           :2020-01-22
 #version        :0.1
 #usage          :curl -s https://raw.githubusercontent.com/rgaidot/iterm-fish-fisherman-osx/master/install_plugins.sh | fish
 #fish_version   :2.7.0
 #===================================================================================
 
-fisher add anicode
-fisher add await
+fisher add igalic/anicode
+fisher add oh-my-fish/plugin-await
 fisher add edc/bass
-fisher add omf/battery
-fisher add omf/theme-bobthefish
+fisher add oh-my-fish/theme-bobthefish
 fisher add laughedelic/brew-completions
 
 brew install bat
@@ -24,7 +23,7 @@ brew install htop
 brew install diff-so-fancy
 
 brew install terminal-notifier
-fisher add done
+fisher add franciscolourenco/done
 
 brew install tmate
 
@@ -33,32 +32,32 @@ fisher add Shadowigor/plugin-errno-grep
 brew install fd
 
 brew install fzy
-fisher add fzy
+fisher add gyakovlev/fish-fzy
 
 brew install fzf
-fisher add fzf
+fisher add jethrokuan/fzf
 
 brew install fx
 
 brew install grc
-fisher add omf/grc
+fisher add oh-my-fish/plugin-grc
 
 brew install jq
-fisher add omf/license
 
 brew install ncdu
 
-fisher add omf/node-binpath
+fisher add oh-my-fish/plugin-node-binpath
 
-fisher add omf/pj
+fisher add oh-my-fish/plugin-pj
 set -U PROJECT_PATHS ~/Library/Projects
-
-fisher add shark
 
 brew install vault
 
-fisher add upto
-fisher add z
+brew cask install mattr-slate
 
-fisher add up
+fisher add Markcial/upto
+fisher add jethrokuan/z
+
+fisher self-update
+fisher
 fish_update_completions
