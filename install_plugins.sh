@@ -58,6 +58,8 @@ brew cask install mattr-slate
 fisher add Markcial/upto
 fisher add jethrokuan/z
 
+fisher add acomagu/fish-async-prompt
+
 fisher self-update
 fisher
 fish_update_completions

@@ -46,6 +46,7 @@ Installs a lot of useful plugins for Fish Shell:
 - `shark` function build sparklines right in your terminal.
 - `tmate` terminal sharing
 - `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
+- `async-prompt` Make your prompt asynchronous in Fish shell.
 - `vault` Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
 - `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
 
@@ -123,55 +124,61 @@ $ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fis
 #### Install Themes and Plugins
 
 ```shell
-$ fisher add anicode
-$ fisher add await
-$ fisher add edc/bass
-$ fisher add omf/battery
-$ fisher add omf/theme-bobthefish
-$ fisher add laughedelic/brew-completions
-$
-$ brew install bat
-$
-$ brew install diff-so-fancy
-$
-$ brew install httpie
-$
-$ brew install htop
-$
-$ brew install tmate
-$
-$ brew install terminal-notifier
-$ fisher add done
-$
-$ fisher add Shadowigor/plugin-errno-grep
-$
-$ brew install fd
-$
-$ brew install fzy
-$ fisher add fzy
-$
-$ brew install fzf
-$ fisher add fzf
-$
-$ brew install fx
-$
-$ brew install grc
-$ fisher add omf/grc
-$
-$ brew install jq
-$ fisher add omf/license
-$
-$ brew install ncdu
-$
-$ fisher add omf/node-binpath
-$
-$ fisher add omf/pj
-$ set -U PROJECT_PATHS ~/Library/Projects
-$
-$ brew install vault
-$
-$ fisher add upto
-$ fisher add z
+isher add igalic/anicode
+fisher add oh-my-fish/plugin-await
+fisher add edc/bass
+fisher add oh-my-fish/theme-bobthefish
+fisher add laughedelic/brew-completions
+
+brew install bat
+
+brew install httpie
+
+brew install htop
+
+brew install diff-so-fancy
+
+brew install terminal-notifier
+fisher add franciscolourenco/done
+
+brew install tmate
+
+fisher add Shadowigor/plugin-errno-grep
+
+brew install fd
+
+brew install fzy
+fisher add gyakovlev/fish-fzy
+
+brew install fzf
+fisher add jethrokuan/fzf
+
+brew install fx
+
+brew install grc
+fisher add oh-my-fish/plugin-grc
+
+brew install jq
+
+brew install ncdu
+
+fisher add oh-my-fish/plugin-node-binpath
+
+fisher add oh-my-fish/plugin-pj
+set -U PROJECT_PATHS ~/Library/Projects
+
+brew install vault
+
+brew cask install mattr-slate
+
+fisher add Markcial/upto
+fisher add jethrokuan/z
+
+fisher add acomagu/fish-async-prompt
+
+fisher self-update
+fisher
+fish_update_completions
 ```
 
 - [Anicode](https://github.com/fisherman/anicode)
@@ -299,6 +306,11 @@ Instant Terminal Sharing
 - [upto](https://github.com/fisherman/upto)
 
 Gets you to a parent folder, heavily inspired by the plugin upto made by driv.
+
+- [async-prompt](https://github.com/acomagu/fish-async-prompt)
+
+Make your prompt asynchronous in Fish shell.
+
 
 - [vault](https://www.vaultproject.io/)
 
