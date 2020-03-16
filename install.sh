@@ -285,7 +285,7 @@ function install_fisherman() {
     blue_color
     echo "Installing Fisher..."
 
-    curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs ${FISHERMAN_URL}
+    curl ${FISHERMAN_URL} --create-dirs -sLo ~/.config/fish/functions/fisher.fish
 
     green_color
     echo "Fisher installed!"
