@@ -13,7 +13,7 @@ trap on_sigterm SIGKILL SIGTERM
 
 TEMP_DIR=$(mktemp -d)
 GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisher-osx/"
-HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install"
+HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install.sh"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
 NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/25eec835188d2316ef3fe59820950d9f90c5bcf4/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.ttf?raw=true"
 FISHERMAN_URL="https://git.io/fisher"
@@ -124,7 +124,7 @@ function install_homebrew() {
         blue_color
         echo "Installing Homebrew..."
 
-        ruby -e "$(curl -fsSL ${HOMEBREW_INSTALLER_URL})"
+        /bin/bash -c "$(curl -fsSL ${HOMEBREW_INSTALLER_URL})"
         brew update
         brew upgrade
 
