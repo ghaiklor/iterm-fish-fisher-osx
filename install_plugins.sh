@@ -63,3 +63,6 @@ fisher add acomagu/fish-async-prompt
 fisher self-update
 fisher
 fish_update_completions
+
+brew install k3d
+brew install watch

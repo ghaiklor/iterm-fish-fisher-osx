@@ -49,6 +49,8 @@ Installs a lot of useful plugins for Fish Shell:
 - `async-prompt` Make your prompt asynchronous in Fish shell.
 - `vault` Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
 - `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
+- `k3d` a tool for running k3s clusters in container nodes (dind)
+- `watch` execute a program periodically, showing output fullscreen
 
 ## How To Setup
 
@@ -56,7 +58,7 @@ You can achieve the same setup as mine, by manually setting up the environment (
 
 ## Automatic Installation
 
-__Highly recommended__ to run the script below under Bash session in default Terminal.app.
+**Highly recommended** to run the script below under Bash session in default Terminal.app.
 I can not guarantee proper installation outside of Terminal.app + Bash Shell.
 
 ```shell
@@ -124,7 +126,7 @@ $ curl -Lo ~/.config/fish/functions/fisher.fish --create-dirs https://git.io/fis
 #### Install Themes and Plugins
 
 ```shell
-isher add igalic/anicode
+fisher add igalic/anicode
 fisher add oh-my-fish/plugin-await
 fisher add edc/bass
 fisher add oh-my-fish/theme-bobthefish
@@ -175,6 +177,9 @@ fisher add Markcial/upto
 fisher add jethrokuan/z
 
 fisher add acomagu/fish-async-prompt
+
+brew install k3d
+brew install watch
 
 fisher self-update
 fisher
@@ -263,7 +268,7 @@ end
 ```
 
 - [fzf](https://github.com/antonmedv/fx)
-fzf, cli tool and terminal JSON viewer.
+  fzf, cli tool and terminal JSON viewer.
 
 - [GRC](https://github.com/oh-my-fish/plugin-grc)
 
@@ -311,7 +316,6 @@ Gets you to a parent folder, heavily inspired by the plugin upto made by driv.
 
 Make your prompt asynchronous in Fish shell.
 
-
 - [vault](https://www.vaultproject.io/)
 
 Secure, store and tightly control access to tokens, passwords, certificates, encryption keys for protecting secrets and other sensitive data using a UI, CLI, or HTTP API.
@@ -320,6 +324,12 @@ Secure, store and tightly control access to tokens, passwords, certificates, enc
 
 `z` tracks the directories you visit.
 With a combination of frequency and recency, it enables you to jump to the directory in mind.
+
+- [k3d](https://github.com/rancher/k3d)
+
+`k3d` a fast kubernetes dev environment
+
+- [watch](http://man7.org/linux/man-pages/man1/watch.1.html)
 
 ## License
 
