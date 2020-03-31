@@ -12,6 +12,7 @@ fisher add igalic/anicode
 fisher add oh-my-fish/plugin-await
 fisher add edc/bass
 fisher add oh-my-fish/theme-bobthefish
+fisher add matchai/spacefish
 fisher add laughedelic/brew-completions
 
 brew install bat

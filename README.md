@@ -22,7 +22,7 @@ The script installs things related to terminal environment only:
 
 - Installs Command Line Tools, Homebrew, iTerm2, Fish, Fisherman.
 - Installs Material Design color preset for iTerm2 and patched Meslo Nerd Font.
-- Theme `bobthefish`, which is based on popular `agnoster`.
+- Themes `bobthefish`, which is based on popular `agnoster`. and `spacefish`
 - Completions for `brew`, `git`, `./node_modules/.bin` and so on, so on...
 
 Installs a lot of useful plugins for Fish Shell:
@@ -131,6 +131,7 @@ fisher add igalic/anicode
 fisher add oh-my-fish/plugin-await
 fisher add edc/bass
 fisher add oh-my-fish/theme-bobthefish
+fisher add matchai/spacefish
 fisher add laughedelic/brew-completions
 
 brew install bat
@@ -218,6 +219,10 @@ Bass makes it easy to use utilities written for Bash in fish shell.
 OS X and Linux compatible battery utility.
 
 - [Bob The Fish](https://github.com/oh-my-fish/theme-bobthefish)
+
+- [spacefish](https://github.com/matchai/spacefish)
+
+fisher add matchai/spacefish
 
 A Powerline-style, Git-aware fish theme optimized for awesome.
 
