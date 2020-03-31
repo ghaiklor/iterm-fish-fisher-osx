@@ -51,6 +51,7 @@ Installs a lot of useful plugins for Fish Shell:
 - `z` function shows the most recent and frequently visited folders, so you can go there without typing `cd` everytime.
 - `k3d` a tool for running k3s clusters in container nodes (dind)
 - `watch` execute a program periodically, showing output fullscreen
+- `tig` text-mode interface for Git
 
 ## How To Setup
 
@@ -180,6 +181,7 @@ fisher add acomagu/fish-async-prompt
 
 brew install k3d
 brew install watch
+brew install tig
 
 fisher self-update
 fisher
@@ -330,6 +332,8 @@ With a combination of frequency and recency, it enables you to jump to the direc
 `k3d` a fast kubernetes dev environment
 
 - [watch](http://man7.org/linux/man-pages/man1/watch.1.html)
+
+- [tig](https://jonas.github.io/tig/)
 
 ## License
 

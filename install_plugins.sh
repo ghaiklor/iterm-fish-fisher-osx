@@ -66,3 +66,5 @@ fish_update_completions
 
 brew install k3d
 brew install watch
+
+brew install tig
