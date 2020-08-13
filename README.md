@@ -127,65 +127,20 @@ curl https://git.io/fisher --create-dirs -sLo ~/.config/fish/functions/fisher.fi
 #### Install Themes and Plugins
 
 - [Anicode](https://github.com/fisherman/anicode)
-
-Find arbitrary unicode characters matching a search pattern.
-The last result match will be copied to your clipboard.
-
 - [Bass](https://github.com/edc/bass)
-
-Bass makes it easy to use utilities written for Bash in fish shell.
-
 - [Bob The Fish](https://github.com/oh-my-fish/theme-bobthefish)
-
-A Powerline-style, Git-aware fish theme optimized for awesome.
-
 - [Brew Completions](https://github.com/laughedelic/brew-completions)
-
-Fish shell completions for Homebrew.
-
+- [Colored Man Pages](https://github.com/patrickf3139/colored_man_pages.fish)
 - [done](https://github.com/fisherman/done)
-
-A fish plugin to automatically receive notifications when long processes finish.
-
 - [errno-grep](https://github.com/Shadowigor/plugin-errno-grep)
-
-Search for error codes, labels or messages via `errno-grep`.
-
 - [fzy](https://github.com/fisherman/fzy)
-
-`fzy` picks up history item and adds it to your shell.
-You need to execute manually.
-
-Run `fkill` and type process you want to kill.
-`fkill` kills immediately.
-Press enter and process will be killed.
-
 - [GRC](https://github.com/oh-my-fish/plugin-grc)
-
-Generic Colouriser is yet another colouriser for beautifying your logfiles or output of commands.
-
+- [kill-on-port](https://github.com/vincentjames501/fish-kill-on-port)
 - [Node BinPath](https://github.com/oh-my-fish/plugin-node-binpath)
-
-Automatically add `node_modules/.bin` to `PATH` when present.
-
 - [NVM (Node Version Manager)](https://github.com/jorgebucaran/fish-nvm)
-
-Pure-fish, Node.js version manager.
-
 - [PJ](https://github.com/oh-my-fish/plugin-pj)
-
-`pj` allows you to easily jump between your favourite directories in a predictable manner.
-You tell pj where to look for your projects, and it will allow you to jump to them easily with tab completion.
-It even provides a convenient ability to open an editor in that directory from anywhere!
-
+- [rustup](https://github.com/oh-my-fish/plugin-rustup)
 - [upto](https://github.com/fisherman/upto)
-
-Gets you to a parent folder, heavily inspired by the plugin upto made by driv.
-
-- [z](https://github.com/fisherman/z)
-
-`z` tracks the directories you visit.
-With a combination of frequency and recency, it enables you to jump to the directory in mind.
 
 ## License
 
