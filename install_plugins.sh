@@ -12,6 +12,7 @@ fisher add igalic/anicode
 fisher add edc/bass
 fisher add oh-my-fish/theme-bobthefish
 fisher add laughedelic/brew-completions
+fisher add patrickf3139/colored_man_pages.fish
 
 brew install terminal-notifier
 fisher add franciscolourenco/done
@@ -24,14 +25,15 @@ fisher add gyakovlev/fish-fzy
 brew install grc
 fisher add oh-my-fish/plugin-grc
 
+fisher add vincentjames501/fish-kill-on-port
 fisher add oh-my-fish/plugin-node-binpath
-fisher add jorgebucaran/fish-nvm
+fisher add jorgebucaran/nvm.fish
 
 fisher add oh-my-fish/plugin-pj
-set -gx PROJECT_PATHS ~/Library/Projects
+set -Ux PROJECT_PATHS ~/Library/Projects
 
-fisher add Markcial/upto
-fisher add jethrokuan/z
+fisher add oh-my-fish/plugin-rustup
+fisher add markcial/upto
 
 fisher self-update
 fisher
