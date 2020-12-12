@@ -1,5 +1,7 @@
 # iTerm 2 + Fish Shell + Fisher + Themes\Plugins
 
+_NOTE: This guide is based on tooling that is partly not available for Apple Silicon. I'm waiting for required changes from third-parties and then can check and update the guild along with the script itself. For now, it works only on Intel based Mac._
+
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
 Please, raise your issue if something strange happened.
