@@ -120,5 +120,4 @@ Here is the list of plugins:
 - [node-bin-path](https://github.com/oh-my-fish/plugin-node-binpath)
 - [nvm](https://github.com/jorgebucaran/nvm.fish)
 - [pj](https://github.com/oh-my-fish/plugin-pj)
-- [rustup](https://github.com/oh-my-fish/plugin-rustup)
 - [upto](https://github.com/Markcial/upto)
