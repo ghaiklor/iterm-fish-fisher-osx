@@ -112,7 +112,6 @@ Here is the list of plugins:
 - [Bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
 - [Colored Man Pages](https://github.com/PatrickF1/colored_man_pages.fish)
 - [done](https://github.com/franciscolourenco/done)
-- [plugin-errno-grep](https://github.com/Shadowigor/plugin-errno-grep)
 - [fzy](https://github.com/gyakovlev/fish-fzy)
 - [grc](https://github.com/oh-my-fish/plugin-grc)
 - [Kill on Port](https://github.com/vincentjames501/fish-kill-on-port)
