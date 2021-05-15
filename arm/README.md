@@ -110,7 +110,6 @@ Here is the list of plugins:
 - [Anicode](https://github.com/igalic/anicode)
 - [Bass](https://github.com/edc/bass)
 - [Bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
-- [Brew Completions](https://github.com/laughedelic/brew-completions)
 - [Colored Man Pages](https://github.com/PatrickF1/colored_man_pages.fish)
 - [done](https://github.com/franciscolourenco/done)
 - [plugin-errno-grep](https://github.com/Shadowigor/plugin-errno-grep)
