@@ -90,7 +90,7 @@ Restart your terminal emulator and make sure that you are under Fish Shell now.
 Once you in, add the homebrew binaries to the PATH:
 
 ```shell
-set --append --universal fish_user_paths /opt/homebrew/bin/
+fish_add_path /opt/homebrew/bin/
 ```
 
 Afterwards, you can install Fisher.
