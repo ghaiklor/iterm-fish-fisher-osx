@@ -1,6 +1,6 @@
 # iTerm 2 + Fish Shell + Fisher + Themes\Plugins
 
-_NOTE: This guide is based on tooling that is partly not available for Apple Silicon. I'm waiting for required changes from third-parties and then can check and update the guild along with the script itself. For now, it works only on Intel based Mac._
+_NOTE: The automation script that does all the dirty work is supported only on Intel MacBook. There are sub-folders `arm` and `intel` in the repository where the updated guides live for those platforms. But, there are no automation scripts and I can't figure out how to write those and don't make a code duplication. So that, you can freely use the installer for Intel Macbook, it works, but it won't on Apple M* chips._
 
 This guide is targeted for those, who wants to have a nice UI in the terminal with the rich features.
 
