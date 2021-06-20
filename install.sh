@@ -114,9 +114,10 @@ function print_post_installation() {
 
   print "$SUCCESS_LEVEL" "The script accomplished all the commands it was told to do"
   print "$SUCCESS_LEVEL" "Unfortunately, some things can’t be automated and you need to do them manually"
-  print "$SUCCESS_LEVEL" "                                                                                                     "
-  print "$SUCCESS_LEVEL" "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply material-design color preset "
-  print "$SUCCESS_LEVEL" "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply Meslo font (for non-ASCII as well)"
+  print "$SUCCESS_LEVEL" " "
+  print "$SUCCESS_LEVEL" "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply material-design-colors preset"
+  print "$SUCCESS_LEVEL" "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply FiraCode Nerd Font with ligatures"
+  print "$SUCCESS_LEVEL" "3) Open iTerm -> Preferences -> Profiles -> Text -> Non-ASCII Font and apply FiraCode Nerd Font with ligatures"
 }
 
 print_banner
