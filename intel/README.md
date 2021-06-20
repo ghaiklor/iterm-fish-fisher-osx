@@ -1,10 +1,31 @@
 # Command Line Tools + Homebrew + iTerm + Fish + Fisher + Plugins
 
+- [Command Line Tools + Homebrew + iTerm + Fish + Fisher + Plugins](#command-line-tools--homebrew--iterm--fish--fisher--plugins)
+  - [Automatic Installation](#automatic-installation)
+  - [Manual Installation](#manual-installation)
+    - [Command Line Tools](#command-line-tools)
+    - [Homebrew](#homebrew)
+    - [iTerm2](#iterm2)
+    - [iTerm 2 Material Design Color Scheme](#iterm-2-material-design-color-scheme)
+    - [iTerm 2 Patched Font](#iterm-2-patched-font)
+    - [Fish Shell](#fish-shell)
+    - [Fisher](#fisher)
+    - [Plugins](#plugins)
+
 This document shows you how to install terminal environment on your MacOS by installing required tools, shell and the plugins to it.
 
 There are two ways on how to configure it: automatic installation via the script and the manual installation where I explain everything step by step.
 
+## Automatic Installation
+
+There is a shell script in the root of the repository.
+It works both for ARM based desktops and Intel based.
+Please, refer to the [README](../README.md) that written there.
+
 ## Manual Installation
+
+In case you want to set up everything manually, this section is for you.
+Please note that the steps described here work only for Intel based desktops.
 
 ### Command Line Tools
 
@@ -55,7 +76,7 @@ Specifically, to add a high number of extra glyphs from popular â€˜iconic fontsâ
 We use one of their fonts to render the theme that uses ligatures from there.
 So you need to download the font, install it in the Font Book and apply in your terminal emulator [iTerm2].
 
-When you [download the font](https://github.com/ryanoasis/nerd-fonts/blob/fa69496f5a3291fbcb6c0ad5bcec9c8bcab842fc/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete.ttf), you can open it by double clicking.
+When you [download the font](https://github.com/ryanoasis/nerd-fonts/blob/bc4416e176d4ac2092345efd7bcb4abef9d6411e/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete.ttf), you can open it by double clicking.
 It will open the Font Book and install the font.
 Afterwards, go to iTerm2 -> Preferences -> Profiles -> Default -> Text and set the font `MesloLGMDZ Nerd Font`.
 
@@ -101,15 +122,11 @@ Small things left.
 Just install the plugins using Fisher.
 Here is the list of plugins:
 
-- [Anicode](https://github.com/igalic/anicode)
 - [Bass](https://github.com/edc/bass)
 - [Bobthefish](https://github.com/oh-my-fish/theme-bobthefish)
 - [Colored Man Pages](https://github.com/PatrickF1/colored_man_pages.fish)
 - [done](https://github.com/franciscolourenco/done)
-- [fzy](https://github.com/gyakovlev/fish-fzy)
 - [grc](https://github.com/oh-my-fish/plugin-grc)
-- [Kill on Port](https://github.com/vincentjames501/fish-kill-on-port)
-- [node-bin-path](https://github.com/oh-my-fish/plugin-node-binpath)
 - [nvm](https://github.com/jorgebucaran/nvm.fish)
 - [pj](https://github.com/oh-my-fish/plugin-pj)
 - [upto](https://github.com/Markcial/upto)
