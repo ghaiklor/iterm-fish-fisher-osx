@@ -121,6 +121,7 @@ function print_post_installation() {
 }
 
 print_banner
+
 install_command_line_tools
 install_homebrew
 install_iterm
@@ -128,4 +129,5 @@ install_iterm_color_scheme
 install_iterm_nerd_fonts
 install_fish_shell
 install_fisher_and_plugins
+
 print_post_installation
