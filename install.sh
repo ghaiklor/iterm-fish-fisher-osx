@@ -80,10 +80,10 @@ function install_iterm_color_scheme() {
 
 function install_iterm_nerd_fonts() {
   print "$INFO_LEVEL" "Installing Nerd Fonts..."
-  print "$INFO_LEVEL" "Please, close opened Font Book instance when it's done importing the font..."
+  print "$INFO_LEVEL" "Please, close opened Font Book instance when it's done importing the fonts..."
 
-  NERD_FONT_PATH="$TEMP_DIR/nerd-fonts.ttf"
-  curl --silent --output "$NERD_FONT_PATH" "$NERD_FONT_URL"
+  NERD_FONT_PATH="$TEMP_DIR/iterm_nerd_fonts.ttf"
+  curl --silent --location --output "$NERD_FONT_PATH" "$NERD_FONT_URL"
   open -W -n "$NERD_FONT_PATH"
 }
 
