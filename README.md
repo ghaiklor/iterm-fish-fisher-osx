@@ -12,9 +12,11 @@ I'd like to improve this script, so it could work without any errors during the 
 Every time, I've re-installed my operating system, I spend around ~30 minutes to set up my terminal environment again.
 I bored of it, so I decided to make a list of all actions I doing, when setting it up, alongside with automatic script to do so, and share it with you all.
 
-## Screenshots & GIFs
+## Demo
 
-They are available [here](./SCREENSHOTS.md).
+|    brew completions    |    colored man pages    | MacOS notifications |
+| :--------------------: | :---------------------: | :-----------------: |
+| ![brew-completions][1] | ![colored-man-pages][2] |     ![done][3]      |
 
 ## Key Features
 
@@ -29,14 +31,9 @@ Installs a lot of useful plugins for Fish Shell:
 
 - `bass` plugin that makes easy to use scripts written for Bash Shell in Fish Shell.
 - Plugin `done` that notifies you when the process is finished. i.e. you can run `npm install` command and switch back into your browser. When `npm install` is done, you will get OSX notification.
-- `fzy` plugin adds a hotkey <kbd>Ctrl</kbd>+<kbd>R</kbd> that allows to show and search in your command history.
 - `pj` function allows to easily jump between your favorite directories. It installs with configured `~/Library/Projects` folder, so you can jump to any of your projects by calling `pj <PROJECT_FOLDER_NAME>`.
 - `upto` function gets you to a parent folder. I.e. you're inside `a/b/c/d/e/`, calling `upto b` will navigate you into `a/b`.
-- ...and others, you can find the full list below in manual guide.
-
-## How To Setup
-
-You can achieve the same setup as mine, by manually setting up the environment ([following the guide](#manual-installation) below) or automatically [by executing the installer](#automatic-installation) `install.sh`.
+- ...and others, you can find the full list in manual guide.
 
 ## Automatic Installation
 
@@ -56,3 +53,7 @@ So, here is a guide for [ARM based desktops](./arm/README.md) and [Intel based d
 ## License
 
 [MIT](./LICENSE)
+
+[1]: https://user-images.githubusercontent.com/3625244/122667804-66e15680-d1bd-11eb-834c-a58fb32d95ad.gif
+[2]: https://user-images.githubusercontent.com/3625244/122667807-6ba60a80-d1bd-11eb-9b08-859fe6fd2504.gif
+[3]: https://user-images.githubusercontent.com/3625244/122667812-6d6fce00-d1bd-11eb-8073-d92e6e2d82d5.gif
