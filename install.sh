@@ -12,9 +12,9 @@ set -ueo pipefail
 
 PATH=/opt/homebrew/bin:$PATH
 TEMP_DIR=$(mktemp -d)
-COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
-NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/bc4416e176d4ac2092345efd7bcb4abef9d6411e/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete.ttf?raw=true"
-PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh"
+COLOR_SCHEME_URL="https://github.com/MartinSeeler/iterm2-material-design/blob/6bd6c8b3627d079ed3ed74e152b12b1db1eb3a6b/material-design-colors.itermcolors?raw=true"
+NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/bc4416e176d4ac2092345efd7bcb4abef9d6411e/patched-fonts/FiraCode/Retina/complete/Fira%20Code%20Retina%20Nerd%20Font%20Complete.ttf?raw=true"
+PLUGINS_INSTALLER_URL="https://github.com/ghaiklor/iterm-fish-fisher-osx/blob/master/install_plugins.sh?raw=true"
 
 INFO_LEVEL="\033[0;33m"
 SUCCESS_LEVEL="\033[0;32m"
