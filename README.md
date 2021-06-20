@@ -22,6 +22,10 @@ I bored of it, so I decided to make a list of all actions I doing, when setting 
 | :-------------------: | :------------------------------: | :---------------------: |
 | ![git-completions][4] |            ![grc][5]             |        ![nvm][6]        |
 
+| Jump between projects | Navigate to upper folders |
+| :-------------------: | :-----------------------: |
+|       ![pj][7]        |        ![upto][8]         |
+
 ## Key Features
 
 The script installs things related to terminal environment only:
@@ -64,3 +68,5 @@ So, here is a guide for [ARM based desktops](./arm/README.md) and [Intel based d
 [4]: https://user-images.githubusercontent.com/3625244/122667813-6e086480-d1bd-11eb-9d98-cf7f286e70ea.gif
 [5]: https://user-images.githubusercontent.com/3625244/122667814-6ea0fb00-d1bd-11eb-991f-0a6c0db81aeb.gif
 [6]: https://user-images.githubusercontent.com/3625244/122667815-6ea0fb00-d1bd-11eb-95b1-59aead1dde7c.gif
+[7]: https://user-images.githubusercontent.com/3625244/122667816-6f399180-d1bd-11eb-9225-0f0902c8fc3f.gif
+[8]: https://user-images.githubusercontent.com/3625244/122667817-6f399180-d1bd-11eb-9c11-09b2eb2e5418.gif
