@@ -14,9 +14,13 @@ I bored of it, so I decided to make a list of all actions I doing, when setting 
 
 ## Demo
 
-|    brew completions    |    colored man pages    | MacOS notifications |
-| :--------------------: | :---------------------: | :-----------------: |
-| ![brew-completions][1] | ![colored-man-pages][2] |     ![done][3]      |
+| Completions for Homebrew |   Colorized man pages   | MacOS notifications |
+| :----------------------: | :---------------------: | :-----------------: |
+|  ![brew-completions][1]  | ![colored-man-pages][2] |     ![done][3]      |
+
+|  Completions for Git  | Colorizer for ping, ls, cat, etc | Node.js Version Manager |
+| :-------------------: | :------------------------------: | :---------------------: |
+| ![git-completions][4] |            ![grc][5]             |        ![nvm][6]        |
 
 ## Key Features
 
@@ -57,3 +61,6 @@ So, here is a guide for [ARM based desktops](./arm/README.md) and [Intel based d
 [1]: https://user-images.githubusercontent.com/3625244/122667804-66e15680-d1bd-11eb-834c-a58fb32d95ad.gif
 [2]: https://user-images.githubusercontent.com/3625244/122667807-6ba60a80-d1bd-11eb-9b08-859fe6fd2504.gif
 [3]: https://user-images.githubusercontent.com/3625244/122667812-6d6fce00-d1bd-11eb-8073-d92e6e2d82d5.gif
+[4]: https://user-images.githubusercontent.com/3625244/122667813-6e086480-d1bd-11eb-9d98-cf7f286e70ea.gif
+[5]: https://user-images.githubusercontent.com/3625244/122667814-6ea0fb00-d1bd-11eb-991f-0a6c0db81aeb.gif
+[6]: https://user-images.githubusercontent.com/3625244/122667815-6ea0fb00-d1bd-11eb-95b1-59aead1dde7c.gif
