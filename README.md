@@ -14,7 +14,17 @@ Moreover, I shared it with you all in a handy Bash script that is easy to use.
 
 ## Demo
 
-TK
+|    Fish Completions    |    Customized Prompt    |    Native Notifications    |
+| :--------------------: | :---------------------: | :------------------------: |
+| ![Fish Completions][1] | ![Customized Prompt][2] | ![Native Notifications][4] |
+
+|    Colorized built-ins    |    Colorized man pages    |    Node.js Version Manager    |
+| :-----------------------: | :-----------------------: | :---------------------------: |
+| ![Colorized built-ins][3] | ![Colorized man pages][5] | ![Node.js Version Manager][6] |
+
+|    Jump between Projects    |    up to directory    |
+| :-------------------------: | :-------------------: |
+| ![Jump between Projects][7] | ![up to directory][8] |
 
 ## Features
 
@@ -153,3 +163,12 @@ Here is the list of plugins:
 ## License
 
 [MIT](./LICENSE)
+
+[1]: https://user-images.githubusercontent.com/3625244/122684115-468cb880-d20c-11eb-85a9-4f3d3f790027.gif
+[2]: https://user-images.githubusercontent.com/3625244/122684124-4d1b3000-d20c-11eb-8975-35e346f92426.gif
+[3]: https://user-images.githubusercontent.com/3625244/122684118-4987a900-d20c-11eb-815c-5604782cc64e.gif
+[4]: https://user-images.githubusercontent.com/3625244/122684116-48ef1280-d20c-11eb-99d1-527c65b79f38.gif
+[5]: https://user-images.githubusercontent.com/3625244/122684106-3ecd1400-d20c-11eb-8244-70172454a73b.gif
+[6]: https://user-images.githubusercontent.com/3625244/122684120-4b516c80-d20c-11eb-82a8-497067fe682b.gif
+[7]: https://user-images.githubusercontent.com/3625244/122684121-4c829980-d20c-11eb-8f6f-8cc8b0f063c6.gif
+[8]: https://user-images.githubusercontent.com/3625244/122684125-4f7d8a00-d20c-11eb-8fd3-9685b4605322.gif
