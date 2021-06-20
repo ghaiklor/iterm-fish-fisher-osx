@@ -1,11 +1,11 @@
 #!/usr/bin/env fish
-#title          :install_plugins.sh
-#description    :This script will install and configure themes and plugins for Fish Shell
-#author         :ghaiklor
-#date           :2021-06-20
-#version        :1.0
-#usage          :curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh | fish
-#fish_version   :3.2.2
+#title         :install_plugins.sh
+#description   :This script will install and configure themes and plugins for Fish Shell
+#author        :ghaiklor
+#date          :2021-06-20
+#version       :1.0
+#usage         :curl --silent https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh | fish
+#fish_version  :3.2.2
 #===================================================================================
 
 curl --silent --location https://git.io/fisher | source
