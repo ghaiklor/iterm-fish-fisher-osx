@@ -46,7 +46,7 @@ function install_command_line_tools() {
 
     xcode-select --install &>/dev/null
     until xcode-select --print-path &>/dev/null; do
-      sleep 1
+      sleep 5
     done
   fi
 }
