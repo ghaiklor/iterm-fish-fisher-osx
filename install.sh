@@ -103,7 +103,7 @@ function install_fisher_and_plugins() {
   print "$INFO_LEVEL" "Installing Fisher + Plugins and post-processing installation..."
 
   PLUGINS_INSTALLER_PATH="$TEMP_DIR/install_plugins.sh"
-  curl --silent --output "$PLUGINS_INSTALLER_PATH" "$PLUGINS_INSTALLER_URL"
+  curl --silent --location --output "$PLUGINS_INSTALLER_PATH" "$PLUGINS_INSTALLER_URL"
   fish "$PLUGINS_INSTALLER_PATH"
 }
 
