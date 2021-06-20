@@ -70,11 +70,11 @@ function install_iterm() {
 }
 
 function install_iterm_color_scheme() {
-  print "$INFO_LEVEL" "Installing Material Design Color Scheme..."
+  print "$INFO_LEVEL" "Installing Color Scheme..."
   print "$INFO_LEVEL" "Please, close opened iTerm instance when it’s done importing the scheme..."
 
-  COLOR_SCHEME_PATH="$TEMP_DIR/iterm-color-scheme.itermcolors"
-  curl --silent --output "$COLOR_SCHEME_PATH" "$COLOR_SCHEME_URL"
+  COLOR_SCHEME_PATH="$TEMP_DIR/iterm_color_scheme.itermcolors"
+  curl --silent --location --output "$COLOR_SCHEME_PATH" "$COLOR_SCHEME_URL"
   open -W -n "$COLOR_SCHEME_PATH"
 }
 
