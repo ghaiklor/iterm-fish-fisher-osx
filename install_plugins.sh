@@ -8,8 +8,10 @@
 #fish_version   :3.2.2
 #===================================================================================
 
+curl --silent --location https://git.io/fisher | source
 brew install terminal-notifier grc
 
+fisher install jorgebucaran/fisher
 fisher install edc/bass
 fisher install oh-my-fish/theme-bobthefish
 fisher install patrickf1/colored_man_pages.fish
