@@ -94,8 +94,8 @@ function install_fish_shell() {
     print "$INFO_LEVEL" "Installing Fish Shell..."
 
     brew install fish
-    cmd "$(which fish)" | sudo tee -a /etc/shells
-    chsh -s "$(which fish)"
+    command -v fish | sudo tee -a /etc/shells
+    chsh -s "$(command -v fish)"
   fi
 }
 
