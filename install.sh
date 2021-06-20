@@ -1,363 +1,130 @@
 #!/usr/bin/env bash
 #title          :install.sh
-#description    :This script will install and configure Fish Shell + Fisher.
+#description    :This script will install and configure Fish Shell + Fisher
 #author         :ghaiklor
-#date           :2017-12-10
-#version        :0.1
+#date           :2021-06-20
+#version        :1.0
 #usage          :bash <(curl -s https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install.sh)
 #bash_version   :3.2.57(1)-release
 #===================================================================================
 
-set -e
-trap on_sigterm SIGKILL SIGTERM
+set -ueo pipefail
 
+PATH=/opt/homebrew/bin:$PATH
 TEMP_DIR=$(mktemp -d)
-GITHUB_REPO_URL_BASE="https://github.com/ghaiklor/iterm-fish-fisher-osx/"
-HOMEBREW_INSTALLER_URL="https://raw.githubusercontent.com/Homebrew/install/master/install.sh"
 COLOR_SCHEME_URL="https://raw.githubusercontent.com/MartinSeeler/iterm2-material-design/master/material-design-colors.itermcolors"
-NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/25eec835188d2316ef3fe59820950d9f90c5bcf4/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete%20Mono.ttf?raw=true"
-FISHERMAN_URL="https://git.io/fisher"
+NERD_FONT_URL="https://github.com/ryanoasis/nerd-fonts/blob/bc4416e176d4ac2092345efd7bcb4abef9d6411e/patched-fonts/Meslo/M-DZ/Regular/complete/Meslo%20LG%20M%20DZ%20Regular%20Nerd%20Font%20Complete.ttf?raw=true"
 PLUGINS_INSTALLER_URL="https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh"
-RESET_COLOR="\033[0m"
-RED_COLOR="\033[0;31m"
-GREEN_COLOR="\033[0;32m"
-BLUE_COLOR="\033[0;34m"
 
-function reset_color() {
-    echo -e "${RESET_COLOR}\c"
+INFO_LEVEL="\033[0;33m"
+SUCCESS_LEVEL="\033[0;32m"
+
+function print() {
+  echo -e "$1$2\033[0m"
 }
 
-function red_color() {
-    echo -e "${RED_COLOR}\c"
-}
-
-function green_color() {
-    echo -e "${GREEN_COLOR}\c"
-}
-
-function blue_color() {
-    echo -e "${BLUE_COLOR}\c"
-}
-
-function separator() {
-    green_color
-    echo "#=============================STEP FINISHED=============================#"
-    reset_color
-}
-
-function hello() {
-    green_color
-    echo "                                              "
-    echo "    _____      __            __         ____  "
-    echo "   / __(_)____/ /_     _____/ /_  ___  / / /  "
-    echo "  / /_/ / ___/ __ \   / ___/ __ \/ _ \/ / /   "
-    echo " / __/ (__  ) / / /  (__  ) / / /  __/ / /    "
-    echo "/_/ /_/____/_/ /_/  /____/_/ /_/\___/_/_/     "
-    echo "                                              "
-    echo "           iTerm + Fish + Fisher              "
-    echo "                 by @ghaiklor                 "
-    echo "                                              "
-    echo "                                              "
-
-    blue_color
-    echo "This script will guide you through installing all the required dependencies for Fish Shell + Fisher + Themes and Plugins"
-    echo "It will not install anything, without your direct agreement (do not afraid)"
-
-    green_color
-    read -p "Do you want to proceed with installation? (y/N) " -n 1 answer
-    echo
-    if [ ${answer} != "y" ]; then
-        exit 1
-    fi
-
-    reset_color
+function print_banner() {
+  print "$INFO_LEVEL" "                                        "
+  print "$INFO_LEVEL" " _____ _     _     ____  _          _ _ "
+  print "$INFO_LEVEL" "|  ___(_)___| |__ / ___|| |__   ___| | |"
+  print "$INFO_LEVEL" "| |_  | / __| '_ \\___ \| '_ \ / _ \ | |"
+  print "$INFO_LEVEL" "|  _| | \__ \ | | |___) | | | |  __/ | |"
+  print "$INFO_LEVEL" "|_|   |_|___/_| |_|____/|_| |_|\___|_|_|"
+  print "$INFO_LEVEL" "                                        "
+  print "$INFO_LEVEL" " Command Line Tools + Homebrew + iTerm2 "
+  print "$INFO_LEVEL" "      Material Design + Nerd Fonts      "
+  print "$INFO_LEVEL" "  Fish Shell + Fisher + Plugins\Themes  "
+  print "$INFO_LEVEL" "              by @ghaiklor              "
+  print "$INFO_LEVEL" "                                        "
 }
 
 function install_command_line_tools() {
-    blue_color
-    echo "Trying to detect installed Command Line Tools..."
+  if xcode-select --print-path &>/dev/null; then
+    print "$SUCCESS_LEVEL" "Command Line Tools already installed, skipping..."
+  else
+    print "$INFO_LEVEL" "Installing Command Line Tools..."
 
-    if ! [ $(xcode-select -p) ]; then
-        blue_color
-        echo "You don't have Command Line Tools installed"
-        echo "They are required to proceed with installation"
-
-        green_color
-        read -p "Do you agree to install Command Line Tools? (y/N) " -n 1 answer
-        echo
-        if [ ${answer} != "y" ]; then
-            exit 1
-        fi
-
-        blue_color
-        echo "Installing Command Line Tools..."
-        echo "Please, wait until Command Line Tools will be installed, before continue"
-        echo "I can't wait for its installation from the script, so continue..."
-
-        xcode-select --install
-    else
-        blue_color
-        echo "Seems like you have installed Command Line Tools, so skipping..."
-    fi
-
-    reset_color
-    separator
-    sleep 1
+    xcode-select --install &>/dev/null
+    until xcode-select --print-path &>/dev/null; do
+      sleep 1
+    done
+  fi
 }
 
 function install_homebrew() {
-    blue_color
-    echo "Trying to detect installed Homebrew..."
-
-    if ! [ $(which brew) ]; then
-        blue_color
-        echo "Seems like you don't have Homebrew installed"
-        echo "We need it for completing the installation of your awesome terminal environment"
-
-        green_color
-        read -p "Do you agree to proceed with Homebrew installation? (y/N) " -n 1 answer
-        echo
-        if [ ${answer} != "y" ]; then
-            exit 1
-        fi
-
-        blue_color
-        echo "Installing Homebrew..."
-
-        /bin/bash -c "$(curl -fsSL ${HOMEBREW_INSTALLER_URL})"
-        brew update
-        brew upgrade
-
-        green_color
-        echo "Homebrew installed!"
-    else
-        blue_color
-        echo "You already have Homebrew installed, so skipping..."
-    fi
-
-    reset_color
-    separator
-    sleep 1
+  if which brew &>/dev/null; then
+    print "$SUCCESS_LEVEL" "Homebrew already installed, skipping..."
+  else
+    print "$INFO_LEVEL" "Installing Homebrew..."
+    /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
+  fi
 }
 
-function install_iTerm2() {
-    blue_color
-    echo "Trying to find installed iTerm..."
-
-    if ! [ $(ls /Applications/ | grep iTerm.app) ]; then
-        blue_color
-        echo "I can't find installed iTerm"
-
-        green_color
-        read -p "Do you agree to install it? (y/N) " -n 1 answer
-        echo
-        if [ ${answer} != "y" ]; then
-            exit 1
-        fi
-
-        blue_color
-        echo "Installing iTerm2..."
-
-        brew cask install iterm2
-
-        green_color
-        echo "iTerm2 installed!"
-    else
-        blue_color
-        echo "Found installed iTerm.app, so skipping..."
-    fi
-
-    reset_color
-    separator
-    sleep 1
+function install_iterm() {
+  if [[ -d /Applications/iTerm.app ]]; then
+    print "$SUCCESS_LEVEL" "iTerm 2 already installed, skipping..."
+  else
+    print "$INFO_LEVEL" "Installing iTerm 2..."
+    brew install --cask iterm2
+  fi
 }
 
-function install_color_scheme() {
-    green_color
-    read -p "Do you want to install color scheme for iTerm? (y/N) " -n 1 answer
-    echo
-    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
-        blue_color
-        echo "Downloading color scheme in ${TEMP_DIR}..."
+function install_iterm_color_scheme() {
+  print "$INFO_LEVEL" "Installing Material Design Color Scheme..."
+  print "$INFO_LEVEL" "Please, close opened iTerm instance when it’s done importing the scheme..."
 
-        cd ${TEMP_DIR}
-        curl -fsSL ${COLOR_SCHEME_URL} > ./material-design.itermcolors
-
-        blue_color
-        echo "iTerm will be opened in 5 seconds, asking to import color scheme (in case, you installed iTerm)"
-        echo "Close iTerm when color scheme will be imported"
-        sleep 5
-        open -W ./material-design.itermcolors
-
-        green_color
-        echo "Color Scheme is installed!"
-    else
-        blue_color
-        echo "Skipping Color Scheme installation..."
-    fi
-
-    reset_color
-    separator
-    sleep 1
+  COLOR_SCHEME_PATH="$TEMP_DIR/iterm-color-scheme.itermcolors"
+  curl --silent --output "$COLOR_SCHEME_PATH" "$COLOR_SCHEME_URL"
+  open -W -n "$COLOR_SCHEME_PATH"
 }
 
-function install_nerd_font() {
-    green_color
-    read -p "Do you want to install patched Nerd Fonts? (y/N) " -n 1 answer
-    echo
-    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
-        blue_color
-        echo "Downloading Nerd Font into ${TEMP_DIR}..."
+function install_iterm_nerd_fonts() {
+  print "$INFO_LEVEL" "Installing Nerd Fonts..."
+  print "$INFO_LEVEL" "Please, close opened Font Book instance when it's done importing the font..."
 
-        cd ${TEMP_DIR}
-        curl -fsSL ${NERD_FONT_URL} > ./nerd_font.ttf
-
-        blue_color
-        echo "Font Manager will be opened in 5 seconds, prompting to install Nerd Font"
-        echo "When you will be done with installing Nerd Font, close the Font Manager"
-        sleep 5
-        open -W ./nerd_font.ttf
-
-        green_color
-        echo "Nerd Font is successfully installed!"
-    else
-        blue_color
-        echo "Skipping Nerd Font installation..."
-    fi
-
-    reset_color
-    separator
-    sleep 1
+  NERD_FONT_PATH="$TEMP_DIR/nerd-fonts.ttf"
+  curl --silent --output "$NERD_FONT_PATH" "$NERD_FONT_URL"
+  open -W -n "$NERD_FONT_PATH"
 }
 
-function install_fish() {
-    blue_color
-    echo "Trying to detect installed Fish Shell..."
+function install_fish_shell() {
+  if which fish &>/dev/null; then
+    print "$SUCCESS_LEVEL" "Fish Shell already installed, skipping..."
+  else
+    print "$INFO_LEVEL" "Installing Fish Shell..."
 
-    if ! [ $(which fish) ]; then
-        blue_color
-        echo "Seems like you don't have Fish Shell installed"
-        echo "Fish Shell is required to continue the installation"
-
-        green_color
-        read -p "Do you agree to install it? (y/N) " -n 1 answer
-        echo
-        if [ ${answer} != "y" ]; then
-            exit 1
-        fi
-
-        blue_color
-        echo "Installing Fish Shell..."
-        echo "The script will ask you the password for sudo 2 times:"
-        echo
-        echo "1) When adding fish shell into /etc/shells via tee"
-        echo "2) When changing your default shell via chsh -s"
-
-        brew install fish
-    else
-        blue_color
-        echo "You already have Fish Shell installed"
-        echo "Just to be sure, that this is your default shell, I'm going to call chsh..."
-    fi
-
-    echo "$(command -v fish)" | sudo tee -a /etc/shells
-    chsh -s "$(command -v fish)"
-
-    green_color
-    echo "Fish installed!"
-
-    reset_color
-    separator
-    sleep 1
+    brew install fish
+    cmd "$(which fish)" | sudo tee -a /etc/shells
+    chsh -s "$(which fish)"
+  fi
 }
 
-function install_fisherman() {
-    blue_color
-    echo "Fisher is required for the installation"
+function install_fisher_and_plugins() {
+  print "$INFO_LEVEL" "Installing Fisher + Plugins and post-processing installation..."
 
-    green_color
-    read -p "Do you agree to install it? (y/N) " -n 1 answer
-    echo
-    if [ ${answer} != "y" ]; then
-        exit 1
-    fi
-
-    blue_color
-    echo "Installing Fisher..."
-
-    curl ${FISHERMAN_URL} --create-dirs -sLo ~/.config/fish/functions/fisher.fish
-
-    green_color
-    echo "Fisher installed!"
-
-    reset_color
-    separator
-    sleep 1
+  PLUGINS_INSTALLER_PATH="$TEMP_DIR/install_plugins.sh"
+  curl --silent --output "$PLUGINS_INSTALLER_PATH" "$PLUGINS_INSTALLER_URL"
+  fish "$PLUGINS_INSTALLER_PATH"
 }
 
-function install_fisherman_plugins_and_themes() {
-    blue_color
-    echo "Some of the Fisher plugins requires external dependencies to be installed via Homebrew..."
+function print_post_installation() {
+  print "$SUCCESS_LEVEL" "                 "
+  print "$SUCCESS_LEVEL" "!!! IMPORTANT !!!"
+  print "$SUCCESS_LEVEL" "                 "
 
-    green_color
-    read -p "Do you want to install Themes and Plugins for Fisher? (y/N) " -n 1 answer
-    echo
-    if [[ ${answer} == "y" || ${answer} == "Y" ]]; then
-        blue_color
-        echo "Installing Themes and Plugins..."
-
-        cd ${TEMP_DIR}
-        curl -fsSL ${PLUGINS_INSTALLER_URL} > ./plugins_installer
-        chmod +x ./plugins_installer
-        ./plugins_installer
-
-        green_color
-        echo "Themes and Plugins installed!"
-    else
-        blue_color
-        echo "Skipping Themes and Plugins installation..."
-    fi
-
-    reset_color
-    separator
-    sleep 1
+  print "$SUCCESS_LEVEL" "The script accomplished all the commands it was told to do"
+  print "$SUCCESS_LEVEL" "Unfortunately, some things can’t be automated and you need to do them manually"
+  print "$SUCCESS_LEVEL" "                                                                                                     "
+  print "$SUCCESS_LEVEL" "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply material-design color preset "
+  print "$SUCCESS_LEVEL" "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply Meslo font (for non-ASCII as well)"
 }
 
-function post_install() {
-    green_color
-    echo
-    echo
-    echo "Setup was successfully done"
-    echo "Do not forgot to make two simple, but manual things:"
-    echo
-    echo "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply material-design color preset"
-    echo "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply Meslo font (for non-ASCII as well)"
-    echo
-    echo "Happy Coding!"
-
-    reset_color
-    exit 0
-}
-
-function on_sigterm() {
-    red_color
-    echo
-    echo -e "Wow... Something serious happened!"
-    echo -e "Though, I don't know what really happened :("
-    echo -e "Please, refer to manual installation -> ${BLUE_COLOR}${GITHUB_REPO_URL_BASE}${RED_COLOR}"
-    echo -e "In case, you want to help me fix this problem, raise an issue -> ${BLUE_COLOR}${GITHUB_REPO_URL_BASE}issues/new"
-
-    reset_color
-    exit 1
-}
-
-hello
+print_banner
 install_command_line_tools
 install_homebrew
-install_iTerm2
-install_color_scheme
-install_nerd_font
-install_fish
-install_fisherman
-install_fisherman_plugins_and_themes
-post_install
+install_iterm
+install_iterm_color_scheme
+install_iterm_nerd_fonts
+install_fish_shell
+install_fisher_and_plugins
+print_post_installation
