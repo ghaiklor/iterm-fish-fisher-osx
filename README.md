@@ -16,6 +16,10 @@ Moreover, I shared it with you all in a handy Bash script that is easy to use.
 
 ## Demo
 
+|    Bash Installer is smart enough to detect the missing parts    |
+| :--------------------------------------------------------------: |
+| ![Bash installer is smart enough to detect the missing parts][9] |
+
 |    Fish Completions    |    Customized Prompt    |
 | :--------------------: | :---------------------: |
 | ![Fish Completions][1] | ![Customized Prompt][2] |
@@ -189,3 +193,4 @@ set --universal --export PROJECT_PATHS ~/Library/Projects
 [6]: https://user-images.githubusercontent.com/3625244/122684120-4b516c80-d20c-11eb-82a8-497067fe682b.gif
 [7]: https://user-images.githubusercontent.com/3625244/122684121-4c829980-d20c-11eb-8f6f-8cc8b0f063c6.gif
 [8]: https://user-images.githubusercontent.com/3625244/122684125-4f7d8a00-d20c-11eb-8fd3-9685b4605322.gif
+[9]: https://user-images.githubusercontent.com/3625244/122728298-a91f9c00-d280-11eb-9095-b90eff65fd1d.gif
