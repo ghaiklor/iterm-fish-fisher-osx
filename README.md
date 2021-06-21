@@ -8,8 +8,10 @@ In such case, this guide is for you!
 
 I use my terminal environment a lot for different tasks.
 When you work with your terminal a lot, eventually, you end up with plugins you use, themes you installed, external dependencies you need and stuff like that.
+
 Once you re-install the operating system, you need to go through configuration again - pain!
 The same happened to me, so I’ve decided that I can automate installation for my terminal environment.
+
 Moreover, I shared it with you all in a handy Bash script that is easy to use.
 
 ## Demo
