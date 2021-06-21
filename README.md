@@ -165,6 +165,15 @@ Here is the list of plugins:
 - [pj](https://github.com/oh-my-fish/plugin-pj)
 - [upto](https://github.com/Markcial/upto)
 
+When you finished installing the plugins, you need to configure some of them.
+You need to enable the Nerd Fonts support for the theme, change the color palette and set the path where your projects located.
+
+```shell
+set --universal --export theme_nerd_fonts yes
+set --universal --export theme_color_scheme zenburn
+set --universal --export PROJECT_PATHS ~/Library/Projects
+```
+
 ## License
 
 [MIT](./LICENSE)
