@@ -181,6 +181,12 @@ set --universal --export theme_color_scheme zenburn
 set --universal --export PROJECT_PATHS ~/Library/Projects
 ```
 
+Afterwards, update the completions for Fish Shell to get an amazing auto-complete in your shell:
+
+```shell
+fish_update_completions
+```
+
 ## License
 
 [MIT](./LICENSE)
