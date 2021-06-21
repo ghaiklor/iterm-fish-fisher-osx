@@ -111,7 +111,6 @@ Set the same font for "Non-ASCII text" and do not forget to check the “Use lig
 ### Fish Shell
 
 [Fish Shell](https://fishshell.com) is a smart and user-friendly command line shell for Linux, macOS, and the rest of the family.
-I don’t want to argue; it is just a preferred choice for me.
 
 First, install the shell using homebrew:
 
