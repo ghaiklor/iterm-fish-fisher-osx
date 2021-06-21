@@ -24,18 +24,16 @@ function print() {
 }
 
 function print_banner() {
-  print "$INFO_LEVEL" "                                        "
-  print "$INFO_LEVEL" " _____ _     _     ____  _          _ _ "
-  print "$INFO_LEVEL" "|  ___(_)___| |__ / ___|| |__   ___| | |"
-  print "$INFO_LEVEL" "| |_  | / __| '_ \\___ \| '_ \ / _ \ | |"
-  print "$INFO_LEVEL" "|  _| | \__ \ | | |___) | | | |  __/ | |"
-  print "$INFO_LEVEL" "|_|   |_|___/_| |_|____/|_| |_|\___|_|_|"
-  print "$INFO_LEVEL" "                                        "
-  print "$INFO_LEVEL" " Command Line Tools + Homebrew + iTerm2 "
-  print "$INFO_LEVEL" "      Material Design + Nerd Fonts      "
-  print "$INFO_LEVEL" "  Fish Shell + Fisher + Plugins\Themes  "
-  print "$INFO_LEVEL" "              by @ghaiklor              "
-  print "$INFO_LEVEL" "                                        "
+  print "$INFO_LEVEL" "                                               "
+  print "$INFO_LEVEL" "   ____ _ ____ _  _ ____ _  _ ____ _    _      "
+  print "$INFO_LEVEL" "   |___ | [__  |__| [__  |__| |___ |    |      "
+  print "$INFO_LEVEL" "   |    | ___] |  | ___] |  | |___ |___ |___   "
+  print "$INFO_LEVEL" "                                               "
+  print "$INFO_LEVEL" "    Command Line Tools + Homebrew + iTerm2     "
+  print "$INFO_LEVEL" "         Material Design + Nerd Fonts          "
+  print "$INFO_LEVEL" "     Fish Shell + Fisher + Plugins\Themes      "
+  print "$INFO_LEVEL" "                 by @ghaiklor                  "
+  print "$INFO_LEVEL" "                                               "
 }
 
 function install_command_line_tools() {
