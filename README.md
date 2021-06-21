@@ -79,9 +79,9 @@ iTerm2 is a replacement for Terminal and the successor to iTerm.
 It works on Macs with macOS 10.14 or newer.
 iTerm2 brings the terminal into the modern age with features you never knew you always wanted.
 
-This is one of the terminal emulators, that works great with color fidelity, patched fonts with ligatures.
+This is one of the terminal emulators, that works great with color fidelity and patched fonts with ligatures.
 Also, it has a tmux support and a lot of other stuff.
-Check out their [website](https://iterm2.com) to more details.
+Check out their [website](https://iterm2.com) for more details.
 
 ```shell
 brew install --cask iterm2
