@@ -40,6 +40,8 @@ Moreover, I shared it with you all in a handy Bash script that is easy to use.
 ## Automatic Installation
 
 Just copy and paste the command into your terminal - simple.
+The installer detects what is absent from your machine and will install it.
+In case your machine already has a dependency, it will skip the installation for it.
 
 ```shell
 bash <(curl --silent --location "https://github.com/ghaiklor/iterm-fish-fisher-osx/blob/master/install.sh?raw=true")
