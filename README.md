@@ -30,11 +30,12 @@ Moreover, I shared it with you all in a handy Bash script that is easy to use.
 
 ## Features
 
-- Bash script that automates the whole routine and easy to use, just copy paste.
+- Bash script that automates the whole configuration routine and easy to use, just copy paste.
+- The commands in script are idempotent, so that you can run the script as many times as you like.
 - Detects if your machine does not have something installed and installs it automatically.
 - Command Line Tools, Homebrew, iTerm2, Color Scheme, Nerd Fonts, Fish Shell, Fisher and Plugins included.
 - Theme `bobthefish` which is based on popular `agnoster` and configured to use nerd fonts.
-- Plugins included like `bass` to support Bash script in Fish, functions like `pj` to jump between projects, etc.
+- Plugins included like `bass` to support Bash scripts in Fish, functions like `pj` to jump between projects, etc.
 
 ## Automatic Installation
 
