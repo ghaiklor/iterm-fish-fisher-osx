@@ -16,13 +16,17 @@ Moreover, I shared it with you all in a handy Bash script that is easy to use.
 
 ## Demo
 
-|    Fish Completions    |    Customized Prompt    |    Native Notifications    |
-| :--------------------: | :---------------------: | :------------------------: |
-| ![Fish Completions][1] | ![Customized Prompt][2] | ![Native Notifications][4] |
+|    Fish Completions    |    Customized Prompt    |
+| :--------------------: | :---------------------: |
+| ![Fish Completions][1] | ![Customized Prompt][2] |
 
-|    Colorized built-ins    |    Colorized man pages    |    Node.js Version Manager    |
-| :-----------------------: | :-----------------------: | :---------------------------: |
-| ![Colorized built-ins][3] | ![Colorized man pages][5] | ![Node.js Version Manager][6] |
+|    Native Notifications    |    Node.js Version Manager    |
+| :------------------------: | :---------------------------: |
+| ![Native Notifications][4] | ![Node.js Version Manager][6] |
+
+|    Colorized built-ins    |    Colorized man pages    |
+| :-----------------------: | :-----------------------: |
+| ![Colorized built-ins][3] | ![Colorized man pages][5] |
 
 |    Jump between Projects    |    up to directory    |
 | :-------------------------: | :-------------------: |
