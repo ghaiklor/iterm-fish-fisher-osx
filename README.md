@@ -128,7 +128,7 @@ command -v fish | sudo tee -a /etc/shells
 Change the default shell to Fish Shell:
 
 ```shell
-chsh -s $(command -v fish)
+chsh -s "$(command -v fish)"
 ```
 
 ### Fisher
