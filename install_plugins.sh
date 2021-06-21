@@ -4,7 +4,7 @@
 #author        :ghaiklor
 #date          :2021-06-20
 #version       :1.0
-#usage         :curl --silent https://raw.githubusercontent.com/ghaiklor/iterm-fish-fisher-osx/master/install_plugins.sh | fish
+#usage         :curl --silent --location "https://github.com/ghaiklor/iterm-fish-fisher-osx/blob/master/install_plugins.sh?raw=true" | fish
 #fish_version  :3.2.2
 #===================================================================================
 
