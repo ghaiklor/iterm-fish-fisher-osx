@@ -71,7 +71,7 @@ function install_iterm_color_scheme() {
   print "$INFO_LEVEL" "Installing Color Scheme..."
   print "$INFO_LEVEL" "Please, close opened iTerm instance when it's done importing the scheme..."
 
-  COLOR_SCHEME_PATH="$TEMP_DIR/iterm_color_scheme.itermcolors"
+  COLOR_SCHEME_PATH="$TEMP_DIR/Material Design.itermcolors"
   curl --silent --location --output "$COLOR_SCHEME_PATH" "$COLOR_SCHEME_URL"
   open -W -n "$COLOR_SCHEME_PATH"
 }
@@ -113,7 +113,7 @@ function print_post_installation() {
   print "$SUCCESS_LEVEL" "The script accomplished all the commands it was told to do"
   print "$SUCCESS_LEVEL" "Unfortunately, some things can’t be automated and you need to do them manually"
   print "$SUCCESS_LEVEL" " "
-  print "$SUCCESS_LEVEL" "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply material-design-colors preset"
+  print "$SUCCESS_LEVEL" "1) Open iTerm -> Preferences -> Profiles -> Colors -> Presets and apply Material Design preset"
   print "$SUCCESS_LEVEL" "2) Open iTerm -> Preferences -> Profiles -> Text -> Font and apply FiraCode Nerd Font with ligatures"
   print "$SUCCESS_LEVEL" "3) Open iTerm -> Preferences -> Profiles -> Text -> Non-ASCII Font and apply FiraCode Nerd Font with ligatures"
 }
