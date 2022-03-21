@@ -35,6 +35,7 @@ Installs a lot of useful plugins for Fish Shell:
 - `errno-grep` function allows to search POSIX error codes and their messages.
 - `fd` a simple, fast and user-friendly alternative to 'find'
 - `ncdu` Ncdu is a disk usage analyzer with an ncurses interface
+- `lsd` rewrite of GNU ls with lot of added features like colors, icons, tree-view, more formatting options etc. 
 - `fzy` plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
 - `fzf` another yet plugin adds a hotkey <key>Ctrl</key>+<key>R</key> that allows to show and search in your command history.
 - `fx` cli tool and terminal JSON viewer.
@@ -142,6 +143,8 @@ brew install htop
 
 brew install diff-so-fancy
 
+brew install lsd
+
 brew install terminal-notifier
 fisher add franciscolourenco/done
 
@@ -247,6 +250,10 @@ Configure git to use diff-so-fancy for all diff output:
 ```
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
 ```
+
+- [lsd](https://github.com/Peltoche/lsd)
+
+This project is a rewrite of GNU ls with lot of added features like colors, icons, tree-view, more formatting options etc.
 
 - [fd](https://github.com/sharkdp/fd)
 

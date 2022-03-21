@@ -23,6 +23,8 @@ brew install htop
 
 brew install diff-so-fancy
 
+brew install lsd
+
 brew install terminal-notifier
 fisher add franciscolourenco/done
 
