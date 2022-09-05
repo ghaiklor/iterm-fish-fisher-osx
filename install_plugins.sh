@@ -71,3 +71,5 @@ brew install k3d
 brew install watch
 
 brew install tig
+
+brew install --cask multipass
